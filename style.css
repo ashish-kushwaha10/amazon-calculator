@@ -1,0 +1,226 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tooltip-font{
+    font-size: 15px;
+}
+.calculate-btn{
+    padding: 10px 25px;
+    background-color: rgb(219, 177, 24);
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply a background color to the body */
+  body {
+    background-color: #f9f9f9;
+  }
+  
+  /* Center the main container */
+  /* .container {
+    margin: 0 auto;
+    padding: 30px 0;
+    max-width: 900px;
+  } */
+  
+  /* Style the header */
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style the main sections */
+  .col-lg-5 {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Style the select dropdowns */
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Style the radio buttons */
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* Style the info tooltip icon */
+  .bi-info-circle-fill {
+    color: #88898a;
+    font-size: 14px;
+  }
+  
+  /* Style the table */
+  table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  /* Style the buttons */
+  /* button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   */
+  /* Style the calculate button */
+  .calculate-btn {
+    margin-top: 20px;
+    /* width: 100%; */
+    border: 2px solid black;
+    background-color: #ff9900;
+    border-radius: 15px;
+    color: white;
+  }
+  
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .col-lg-5 {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Tooltip style */
+  .tooltip-font {
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    position: relative;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Media Query for smaller screens */
+@media (max-width: 768px) {
+    body {
+      padding: 10px; /* Add some padding for better readability */
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    /* Adjust column layout */
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-lg-5 {
+      margin-bottom: 20px;
+    }
+  
+    /* Center align text in tables */
+    th,
+    td {
+      text-align: center;
+    }
+  
+    /* Adjust input fields width */
+    input[type='number'] {
+      width: 100%;
+    }
+  
+    /* Adjust buttons width */
+    button {
+      width: 100%;
+    }
+  
+    /* Style the tooltip text for mobile */
+    .tooltip-text {
+      bottom: 125%;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  #discount-input, #return-input, #excluded-shipping{
+    display: none;
+  }
+  
+  #shipping-charge-div{
+    display: block;
+  }
+ 

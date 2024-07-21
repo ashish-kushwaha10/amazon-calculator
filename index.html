@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazone calculator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        input[type='number'] {
+            width: 5rem;
+        }
+
+        input::placeholder {
+            text-align: right;
+            /* for Chrome, Firefox, Opera */
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 6px;
+            margin-top: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            color: #495057;
+            background-color: #fff;
+        }
+
+        input[type="number"]:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        }
+
+        input[type="number"] {
+            max-width: 200px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">Amazone calculator</h1>
+    <br><br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <h5>1) Select Category
+                    <span>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
+                    </span>
+                </h5>
+
+
+                <select id="category" size="1" onchange="makeSubmenu(this.value)">
+                    <option value="" disabled selected>Choose Category</option>
+                    <option>Automotive, Car & Accessories</option>
+                    <option>Baby Products, Toys & Education</option>
+                    <option>Books, Music, Movies, Video Games, Entertainment</option>
+                    <option>Industrial, Medical, Scientific Supplies & Office Products</option>
+                    <option>Clothing, Fashion, Fashion Accessories, Jewellery, Luggage, Shoes</option>
+                    <option>Electronics (Camera, Mobile, PC, Wireless) & Accessories</option>
+                    <option>Grocery, Food & Pet Supplies</option>
+                    <option>Health, Beauty, Personal Care & Personal Care Appliances</option>
+                    <option>Home, Décor, Home Improvement, Furniture, Outdoor, Lawn & Garden</option>
+                    <option>Kitchen, Large & Small Appliances</option>
+                    <option>Sports, Gym & Sporting Equipment</option>
+                    <option>Others</option>
+                </select>
+                <br><br>
+                <h5>2) Select Subcategory
+                    <span>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
+                    </span>
+                </h5>
+                <select id="categorySelect" size="1">
+                    <option value="" disabled selected> Choose Subcategory </option>
+                    <option></option>
+                </select>
+
+
+
+                <br><br>
+                <h5>3) Product Prices
+                    <span>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
+                    </span>
+                </h5>
+                <p> Selling Price
+                    <span>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
+                    </span>
+                    <input type="number" name="" id="selling-price">
+                    </input>
+
+                </p>
+                <p>Excluded shipping charges <span>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
+                    </span>
+                    <span> Yes <label for="YES"><input name="shippingExcluded" id="isShippingExcluded"
+                                onclick="showInputBlock('excluded-shipping'); hideInputBlock('shipping-charge-div')" type="radio"> No
+                        </label>
+                        <label for="NO"> <input name="shippingExcluded" onclick="hideInputBlock('excluded-shipping'); showInputBlock('shipping-charge-div')"
+                                type="radio"></label>
+                    </span>
+                </p>
+                <p id="excluded-shipping">Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">
+                    Regional <input id="excluded-regional-shipping" type="number" placeholder="&#8377;">
+                    National <input id="excluded-national-shipping" type="number" placeholder="&#8377;"></p>
+                <div>
+
+                    <p>Product cost price <span>
+                            <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on top"></i>
+                        </span><label for=""><input type="number" name="" id="cost-price"></label></p>
+                    <p>Product GST <span>
+                            <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on top"></i>
+                        </span><label for=""><input type="number" name="" id="gst"></label></p>
+
+                </div>
+
+
+                <div id="shipping-charge-div">
+                    <br>
+                    <h5>4) Shipping Charge Calculation
+                        <span>
+                            <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on top"></i>
+                        </span>
+                    </h5>
+                    <!-- <h6>
+                        Ship Using Amazon EasyShip <input type="radio" name="ship">
+
+                        Ship by self <input type="radio" name="ship">
+                    </h6> -->
+                    <p>weight <input id="weight" type="number" placeholder="gram"></p>
+                    <p>hight <input id="height" type="number" placeholder="cm"> Width <input id="width" type="number"
+                            placeholder="cm">
+                        Length <input id="length" type="number" placeholder="cm"></p>
+                </div>
+                <br>
+                <div>
+                    <h5>5) Extra Charge Calculation
+                        <span>
+                            <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on top"></i>
+                        </span>
+                    </h5>
+                    <p>Discount on product <span>
+                            <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on top"></i>
+                        </span>
+
+                        <span> Yes <label for="YES"><input onclick="showInputBlock('discount-input')"
+                                    name="DiscountORDeals" type="radio"> No
+                            </label>
+                            <label for="NO"> <input onclick="hideInputBlock('discount-input')" name="DiscountORDeals"
+                                    type="radio"></label>
+                        </span>
+                    </p>
+                    <div id="discount-input">
+                        <label for="amount">Amount <input type="radio" name="AmountOrPercent"
+                                id="DiscountOnAmount"></label>
+                        <label for="percent">Percent <input type="radio" name="AmountOrPercent"
+                                id="DiscountOnPercent"></label>
+
+                        <label for=""><input type="number" name="" id="discount-deals"></label>
+                    </div>
+                    <!-- return rate -->
+                    <div class="mt-4">
+                        <p>Return Rate on product <span>
+                                <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip"
+                                    data-placement="right" title="Tooltip on top"></i>
+                            </span>
+
+                            <span> Yes <label for="YES"><input onclick="showInputBlock('return-input')"
+                                        name="ReturnRate" type="radio"> No
+                                </label>
+                                <label for="NO"> <input onclick="hideInputBlock('return-input')" name="ReturnRate"
+                                        type="radio"></label>
+                            </span>
+                        </p>
+                        <div id="return-input">
+                            <label for="amount">Amount <input type="radio" name="AmountOrPercent_R"
+                                    id="returnOnAmount"></label>
+                            <label for="percent">Percent <input type="radio" name="AmountOrPercent_R"
+                                    id="returnOnPercentage"></label>
+
+                            <label for=""><input type="number" name="" id="return-rate"></label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center">
+                    <button class="calculate-btn" onclick="calculateResult()">Calculate Profit</button>
+                </div>
+
+            </div>
+            <div class="col-lg-5">
+                <h3>Profit <span>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
+                    </span></h3>
+                <table>
+                    <tr>
+                        <th>Local</th>
+                        <th>Regional</th>
+                        <th>National</th>
+                    </tr>
+                    <tr>
+                        <td class="profit">&#8377;</td>
+                        <td class="profit">&#8377;</td>
+                        <td class="profit">&#8377;</td>
+                    </tr>
+                </table>
+                <br>
+                <p>A-Amazon Referal fee <button style="border: 1px solid black; width: 5rem;" id="referal-fee">
+                        &#8377;</button></p>
+                <p>C-Amazon Closing fee <button style="border: 1px solid black; width: 5rem;" id="closing-fee">
+                        &#8377;</button></p>
+
+                <table>
+                    <tr>
+                        <th>Zone</th>
+                        <th>Local</th>
+                        <th>Regional</th>
+                        <th>National</th>
+                    </tr>
+                    <tr>
+                        <td><b>S-Shipping</b></td>
+                        <td class="shiping-charge"></td>
+                        <td class="shiping-charge"></td>
+                        <td class="shiping-charge"></td>
+                    </tr>
+                    <tr>
+                        <td>A+C+S</td>
+                        <td class="ACS-charge"></td>
+                        <td class="ACS-charge"></td>
+                        <td class="ACS-charge"></td>
+                    </tr>
+                    <tr>
+                        <td>(A+C+S)x18%</td>
+                        <td class="per-charge"></td>
+                        <td class="per-charge"></td>
+                        <td class="per-charge"></td>
+                    </tr>
+                    <tr>
+                        <td>Total charge</td>
+                        <td class="total-charge">&#8377;</td>
+                        <td class="total-charge">&#8377;</td>
+                        <td class="total-charge">&#8377;</td>
+                    </tr>
+
+                </table>
+
+                <br><br>
+                <h3>Bank settlement Amount <span>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
+                    </span></h3>
+                <table>
+                    <tr>
+                        <th>Local</th>
+                        <th>Regional</th>
+                        <th>National</th>
+                    </tr>
+                    <tr>
+                        <td class="bank-settlement">&#8377;</td>
+                        <td class="bank-settlement">&#8377;</td>
+                        <td class="bank-settlement">&#8377;</td>
+                    </tr>
+                </table>
+                <br><br>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
