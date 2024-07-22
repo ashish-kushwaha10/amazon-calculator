@@ -1893,19 +1893,19 @@ function calculateResult() {
     amazonReferalValue = Math.round(amazonReferalValue * 100) / 100
     referalFee.innerHTML = amazonReferalValue;
 
-    // condition for closing fee
-    switch (true) {
+      // condition for closing fee
+      switch (true) {
         case sellingPrice <= 250:
-            closingFee = 8;
+            closingFee = 4;
             break;
         case sellingPrice > 250 && sellingPrice <= 500:
-            closingFee = 11;
+            closingFee = 9;
             break;
         case sellingPrice > 500 && sellingPrice <= 1000:
-            closingFee = 25;
+            closingFee = 30;
             break;
         case sellingPrice > 1000:
-            closingFee = 45;
+            closingFee = 61;
             break;
     }
     // showing output in webPage with id="closing-fee"
