@@ -896,7 +896,7 @@ var referralFeesByCategory = {
         {
             "Grocery - herbs and spices": {
                 "referralPercentage": {
-                    "300": 4.0,
+                    "300": 7.0,
                     "1000": 5.5,
                     "maxPercentage": 8.0
                 }
@@ -1860,9 +1860,9 @@ function calculateResult() {
 
         }
     }
-    sellingPrice = sellingP.value;
-    costPrice = costPriceId.value;
-    productGST = gst.value;
+    sellingPrice = Number(sellingP.value);
+    costPrice = Number(costPriceId.value);
+    productGST = Number(gst.value);
     let range = Object.keys(referralPercentage) // getting range 
     for (let i = 0; i < range.length ; i++) {
         if (!Number(sellingPrice)) {
@@ -1934,13 +1934,13 @@ function calculateResult() {
         volumetricWeight = (height * width * length) / 5
 
         // actual Weight in kg
-        let weight = weightId.value;
+        let weight = Number(weightId.value);
         let shipingWeight = volumetricWeight > weight ? volumetricWeight : weight;
 
         let shipping = {
             local: 44,
             regional: 53,
-            national: 74
+            national: 76
         };
 
         switch (true) {
@@ -2152,9 +2152,9 @@ function calculateResult() {
     //cost tax
     costPriceTax = (costPrice * productGST) / 100;
 
-    payableTaxLocal = sellingTax - gstOnACSChargesLocal - costPriceTax;
-    payableTaxRegional = sellingTax - gstOnACSChargesRegional - costPriceTax;
-    payableTaxNational = sellingTax - gstOnACSChargesNational - costPriceTax;
+    payableTaxLocal = sellingTax; //+ gstOnACSChargesLocal + costPriceTax;
+    payableTaxRegional = sellingTax; //+ gstOnACSChargesRegional + costPriceTax;
+    payableTaxNational = sellingTax; //+ gstOnACSChargesNational + costPriceTax;
 
     // when payble tax is negative
     if (payableTaxLocal < 0) {
@@ -2216,10 +2216,10 @@ function calculateResult() {
 
     // profit calculation
     let profitLocal, profitRegional, profitNational;
-    console.log({ bankSettlementLocal, costPrice, costPriceTax, payableTaxLocal, returnLossLocal })
-    profitLocal = Math.round((bankSettlementLocal - costPrice - costPriceTax - payableTaxLocal - returnLossLocal) * 100) / 100;
-    profitRegional = Math.round((bankSettlementRegional - costPrice - costPriceTax - payableTaxRegional - returnLossRegional) * 100) / 100;
-    profitNational = Math.round((bankSettlementNational - costPrice - costPriceTax - payableTaxLocal - returnLossNational) * 100) / 100;
+    console.log({ bankSettlementLocal, costPrice, payableTaxLocal, returnLossLocal })
+    profitLocal = Math.round((bankSettlementLocal - costPrice - payableTaxLocal - returnLossLocal) * 100) / 100;
+    profitRegional = Math.round((bankSettlementRegional - costPrice - payableTaxRegional - returnLossRegional) * 100) / 100;
+    profitNational = Math.round((bankSettlementNational - costPrice - payableTaxNational - returnLossNational) * 100) / 100;
 
     profitId[0].innerHTML = profitLocal;
     profitId[1].innerHTML = profitRegional;
