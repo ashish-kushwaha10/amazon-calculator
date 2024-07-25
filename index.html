@@ -78,18 +78,13 @@
 
                 <select id="category" size="1" onchange="makeSubmenu(this.value)">
                     <option value="" disabled selected>Choose Category</option>
-                    <option>Automotive, Car & Accessories</option>
-                    <option>Baby Products, Toys & Education</option>
-                    <option>Books, Music, Movies, Video Games, Entertainment</option>
-                    <option>Industrial, Medical, Scientific Supplies & Office Products</option>
-                    <option>Clothing, Fashion, Fashion Accessories, Jewellery, Luggage, Shoes</option>
-                    <option>Electronics (Camera, Mobile, PC, Wireless) & Accessories</option>
-                    <option>Grocery, Food & Pet Supplies</option>
-                    <option>Health, Beauty, Personal Care & Personal Care Appliances</option>
-                    <option>Home, Décor, Home Improvement, Furniture, Outdoor, Lawn & Garden</option>
-                    <option>Kitchen, Large & Small Appliances</option>
-                    <option>Sports, Gym & Sporting Equipment</option>
-                    <option>Others</option>
+                    <option>Media</option>
+                    <option>Consumables</option>
+                    <option>Softline</option>
+                    <option>Other Hardline</option>
+                    <option>CE / PC / Wireless</option>
+                    <option>Office Products</option>
+                    <option>Musical Instruments</option>
                 </select>
                 <br><br>
                 <h5>2) Select Subcategory
@@ -126,10 +121,10 @@
                             title="Tooltip on top"></i>
                     </span>
                     <span> Yes <label for="YES"><input name="shippingExcluded" id="isShippingExcluded"
-                                onclick="showInputBlock('excluded-shipping'); hideInputBlock('shipping-charge-div')" type="radio"> No
+                                onclick="showInputBlock('excluded-shipping')" type="radio"> No
                         </label>
-                        <label for="NO"> <input name="shippingExcluded" onclick="hideInputBlock('excluded-shipping'); showInputBlock('shipping-charge-div')"
-                                type="radio"></label>
+                        <label for="NO"> <input name="shippingExcluded"
+                                onclick="hideInputBlock('excluded-shipping')" type="radio"></label>
                     </span>
                 </p>
                 <p id="excluded-shipping">Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">

@@ -1,0 +1,872 @@
+Category	
+Standard rate
+
+
+main Category: Media
+School Textbook Bundles	
+2.0% for item price <= 250
+
+3.0 % for item price > 250 and <= 1,000
+
+4.0% for item price > 1,000 and <= 1,500
+
+4.5% for item price > 1,500
+
+Books	
+3.0% for item price <= 250
+
+4.5% for item price > 250 and <= 500
+
+9.0% for item price > 500 and <= 1,000
+
+13.5% for item price > 1,000
+
+Movies	6.5%
+Software products	9.5%
+Music	6.5%
+Video Games - Consoles	
+7.0% for item price <= 1,000
+
+9.0% for item price > 1,000
+
+Video Games - Accessories	
+10.5% for item price <= 500
+
+13.5% for item price > 500
+
+Video Games - Online Game Services	2.0%
+Video Games - Other products	9.0%
+Toys - Drones	
+7.5% for item price <=300
+
+16% for item price >300 and <=500
+
+11.5% for item price >500 and <=1,000
+
+12% for item price >1,000
+
+Toys - Balloons and Soft Toys	11.0%
+Toys - Other products	
+9% for item price <=300
+
+9.5% for item price >300 and <=1,000
+
+11.5% for item price > 1,000
+
+Pet Foods	
+5.5% for item price <= 300
+
+11.5% for item price > 300 and <=1,000
+
+12.5% for item price >1,000
+
+
+main Category: Consumables
+Pet - Other products	
+2.0% for item price <= 300
+
+11.0% for item price > 300 and <= 500
+
+12.0% for item price > 500
+
+Beauty - Haircare, Bath and Shower	
+7.5% for item price <= 300
+
+5.0% for item price > 300 and <= 500
+
+8.0% for item price > 500
+
+Beauty - Make-up	
+6.0% for item price <=300
+
+4.5% for item price >300 and <=500
+
+7.5% for item price >500 and <=1,000
+
+7% for item price >1,000
+
+Deodorants	
+8.5% for item price <=300
+
+6.5% for item price >300 and <=1,000
+
+7.0% for item price >1,000
+
+Facial Steamers	7.0%
+Beauty - Fragrance	
+13.5% for item price <= 300
+
+12.5% for item price >300 and <=500
+
+14% for item price >500
+
+Face Wash	
+6.0% for item price <=300
+
+5.0% for item price >300 and <=500
+
+9% for item price >500 and <=1,000
+
+9.5% for item price >1,000
+
+Moisturizer Cream	
+6.5% for item price <=500
+
+9.0% for item price >500 and <=1,000
+
+9.5% for item price >1,000
+
+Sunscreen	
+6.5% for item price <=300
+
+6.0% for item price >300 and <=500
+
+9.0% for item price >500 and <=1,000
+
+9.5% for item price >1,000
+
+Beauty - Other products	
+6.5% for item price <=300
+
+7.0% for item price > 300 and <= 500
+
+9.0% for item price > 500
+
+Luxury Beauty	
+5.0% for item price <=300
+
+6.0% for item price >300 and <=500
+
+9% for item price >500 and <=1,000
+
+10% for item price >1,000
+
+Health and Household - Medical Equipment, Sexual Wellness, Adult Incontinence, Elderly Care	8.0%
+Health and Household – Sports Nutrition and Meal Replacement Shakes	9.0%
+Health and Household – Ayurvedic, Homeopathic and Alternate Medicine products	
+6.0% for item price <= 500
+
+8.0% for item price > 500
+
+Health and Household - Household Cleaning, Laundry, Air Fresheners, Personal Hygiene (Hand Wash, Feminine Hygiene and Oral Care)	
+4.5% for item price <= 500
+
+7.5% for item price > 500 and<=1,000
+
+8.0% for item price >1,000
+
+Health and Household - Vitamins & Mineral Health Supplements	
+9.0% for item price <=500
+
+10.5% for item price >500
+
+Health and Household - Other products	11.5%
+Baby Hardlines - Swings, Bouncers and Rockers, Carriers, Walkers, Baby Safety - Guards and Locks, Baby Room Décor, Baby Furniture, Baby Car Seats and Accessories	
+6.0% for item price <= 300
+
+8.5% for item price >300 and <=500
+
+6.0% for item price > 500 and <=1,000
+
+7.5% for item price >1,000
+
+Baby Strollers	
+4% for item price <=300
+
+6% for item price >300 and <=1,000
+
+10.0% for item price >1,000
+
+Baby - Diapers	
+5.0% for item price <= 300
+
+5.5% for item price > 300 and <= 500
+
+9.5% for item price > 500
+
+Baby - Other products	
+3.5% for item price <= 300
+
+6.5% for item price > 300 and <= 500
+
+9.0% for item price > 500 and <= 1,000
+
+7.0% for item price > 1,000
+
+Grocery - Herbs and Spices	
+4.0% for item price <= 300
+
+5.5% for item price > 300 and <= 1,000
+
+8.0% for item price > 1,000
+
+Grocery - Dried Fruits and Nuts	
+6.0% for item price <= 1,000
+
+8.0% for item price > 1,000
+
+Grocery - Hampers and gifting	
+9.0% for item price <= 1,000
+
+11.5% for item price > 1,000
+
+Grocery and Gourmet - Oils	
+7.5% for item price <=1,000
+
+9% for item price >1,000
+
+Grocery and Gourmet - Other products	
+7.0% for item price <= 1,000
+
+9.0% for item price > 1,000
+
+OTC Medicine	
+12.0% for item price <= 500
+
+15.0% for item price > 500
+
+Pharmacy - Prescription Medicines	6.0%
+Personal Care Appliances - Weighing Scales and Fat Analysers	
+11 % for item price <= 500
+
+13.5% for >500 and <=1000
+
+13% for item price > 1000
+
+Personal Care Appliances - Grooming and Styling	
+11.0% for item price <= 1,000
+
+9.0% for item price > 1,000
+
+Personal Care Appliances - Electric Massagers	
+9.5% for item price <= 500
+
+14.5% for item price > 500
+
+Personal Care Appliances - Glucometer and Glucometer Strips	5.5%
+Personal Care Appliances - Thermometers	
+12.5% for item price <= 500
+
+10.5% for item price > 500
+
+Personal Care Appliances - Other products	
+7.5% for item price <=300
+
+10.5% for item price >300 and <=500
+
+11% for item price >500 and <=1000
+
+7.5% for item price >1000
+
+
+
+Main Category: Softline	
+Apparel - Women’s Innerwear and Lingerie	
+13.0% for item price <= 300
+
+14.0% for item price >300 and <=500
+
+19.5% for item price > 500 and <= 1,000
+
+15.0% for item price > 1,000
+
+Apparel - Sarees & Dress Materials	
+14.0% for item price <= 500
+
+16.5% for item price > 500 and <= 1,000
+
+23.0% for item price > 1,000
+
+Apparel - Sweat Shirts and Jackets	
+8.0% for item price <= 500
+
+20.0% for item price > 500 and <= 1,000
+
+24.0% for item price > 1,000
+
+Apparel Other Innerwear	
+12.0% for item price <= 500
+
+16.5% for item price > 500 and <=1,000
+
+18.5% for item price >1,000
+
+Sleepwear	
+13.5% for item price <=300
+
+11.0% for item price >300 and <= 500
+
+16.5% for item price > 500 and <=1,000
+
+19.0% for item price >1,000
+
+Apparel - Accessories	
+13.0% for item price <= 500
+
+19.0% for item price > 500
+
+Apparel - Men's T-Shirts (except 7 Tank Tops and Full Sleeve Tops)	
+13.5% for item price <= 500
+
+21.0% for item price > 500
+
+Apparel - Ethnic Wear	
+12.5% for item price <= 300
+
+7.5% for item price >300 and <=1,000
+
+17.5% for item price > 1,000
+
+Apparel - Baby	
+11.0% for item price <= 500
+
+17.5% for item price > 500 and <= 1,000
+
+20.0% for item price > 1,000
+
+Apparel - Shorts	
+16.5% for item price <= 300
+
+13.5% for item price >300 and <=500
+
+23.5% for item price >500 and <=1,000
+
+24.0% for item price > 1,000
+
+Apparel - Other products	
+11.0% for item price <= 500
+
+18.5% for item price > 500 and <= 1,000
+
+19.0% for item price > 1,000
+
+Eyewear - Sunglasses, Frames and Zero Power Eye Glasses	
+14.0% for item price <= 500
+
+15.0% for item price > 500 and <=1,000
+
+18.5% for item price >1,000
+
+Watches	14.0%
+Flip Flops	
+13.0% for item price <= 1,000
+
+15.0% for item price > 1,000
+
+Kids Shoes	
+10% for item price <= 300
+
+14.0% for item price > 300 and <= 1,000
+
+16.0% for item price > 1,000
+
+Shoes	
+15.0% for item price <= 500
+
+16.0% for item price > 500 and <=1,000
+
+16.5% for item price >1,000
+
+Wallets	
+10.0% for item price <= 500
+
+12.5% for item price > 500 and <=1,000
+
+12% for item price >1,000
+
+Backpacks	
+12.0% for item price <= 500
+
+13.0% for item price > 500
+
+Handbags	
+10.0% for item price <= 500
+
+11.0% for item price >500 and <=1,000
+
+12.0% for item price > 1,000
+
+Luggage - Suitcase & Trolleys	
+7.5% for item price <= 500
+
+6.5% for item price > 500 and <= 1,000
+
+5.5% for item price > 1,000
+
+Luggage - Travel Accessories	
+12.0% for item price <= 300
+
+9.0% for item price > 300 and <= 500
+
+10.0% for item price > 500
+
+Luggage - Other products	
+6.0% for item price <= 300
+
+9.0% for item price >300 and <=500
+
+8.0% for item price > 500
+
+Silver Jewellery	
+10.5% for item price <= 1,000
+
+13.0% for item price > 1,000
+
+Silver coins and Bars	3.0%
+Fine Jewellery - Unstudded and Solitaire	5.0%
+Fine Jewellery - Studded	10.0%
+Fine Jewellery - Gold Coins	5.0%
+Fashion Jewellery	
+22.5% for item price <= 1,000
+
+24.0% for item price > 1,000
+
+main Category: Other Hardline
+Kitchen Tools & Supplies - Choppers, Knives, Bakeware & Accessories	
+5.0% for item price <= 300
+
+11.5% for item price > 300 and <= 1,000
+
+12.5% for item price >1,000
+
+Cookware, Tableware and Dinnerware	
+7.0% for item price <= 500
+
+9.0% for item price > 500 and <= 1,000
+
+12.5% for item price > 1,000
+
+Kitchen - Glassware and Ceramicware	
+6.0% for item price <= 300
+
+11.0% for item price > 300 and <=1,000
+
+12.5% for item price >1,000
+
+Gas Stoves and Pressure Cookers	
+6.0% for item price <= 1,500
+
+10.0% for item price > 1,500
+
+Small Appliances	
+6.5% for item price <= 5,000
+
+8.0% for item price > 5,000
+
+Fans and Robotic Vacuums	
+6.5% for item price <= 3,000
+
+8.0% for item price > 3,000
+
+Water Purifier and Accessories	
+6.5% for item price <= 5,000
+
+7.5% for item price > 5,000
+
+Water Heaters and Accessories	
+8.0% for item price <= 5,000
+
+9.0% for item price > 5,000
+
+Inverter and Batteries	4.5%
+Cleaning and Home Appliances	
+7.5% for item price <= 5,000
+
+8.5% for item price > 5,000
+
+Containers, Boxes, Bottles and Kitchen Storage	
+5.0% for item price <= 300
+
+7.5% for item price > 300 and <= 500
+
+12.0% for item price > 500
+
+Slipcovers and Kitchen Linens	15.50%
+Kitchen - Other products	
+6.0% for item price <= 300
+
+11.5% for item price > 300 and <= 1,000
+
+12.5% for item price >1,000
+
+Wall Art	
+5.0% for item price <= 300
+
+13.5% for item price > 300
+
+Home Fragrance and Candles	
+7.5% for item price <= 500
+
+12.5% for item price > 500
+
+Home Furnishing (Excluding Curtain and Curtain Accessories)	11.0%
+Bedsheets, Blankets and Covers	
+6.0% for item price <= 500
+
+9.0% for item price > 500 and <=1,000
+
+8.5% for item price >1,000
+
+Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage)	
+10.0% for item price <= 300
+
+14.0% for item price > 300 and <= 1,000
+
+15.0% for item price >1,000
+
+Home - Waste and Recycling	8.0%
+Craft Materials	
+2.0% for item price <= 500
+
+5.0% for item price > 500
+
+Home Decor Products	
+7.0% for item price <= 300
+
+17.0% for item price > 300
+
+Clocks	10.0%
+LED Bulbs and Battens	
+9.0% for item price <= 300
+
+14.0% for item price > 300
+
+Indoor Lighting - Wall, Ceiling Fixture Lights, Lamp Bases, Lamp Shades and Smart Lighting	
+14.5% for item price <=2000
+
+11.5% for item price >2000
+
+Indoor Lighting - Other products	
+13.0% for item price <= 500
+
+16.0% for item price > 500
+
+Cushion Covers	
+8.0% for item price <= 500
+
+10.0% for item price > 500
+
+Curtains and Curtain Accessories	
+15.5% for item price <=300
+
+16.5% for item price >300
+
+Rugs and Doormats	
+10.5% for item price <=1,000
+
+9.0% for item price >1,000
+
+Doors and Windows (Wooden, Metal, PVC / UPVC Doors & Windows)	10.0%
+Sanitaryware - Toilets, Bathtubs, Basins / Sinks, Bath Mirrors & Vanities, and Shower Enclosures / Partitions	10.0%
+Tiles & Flooring Accessories	8.0%
+Wires (Electrical Wires / Cables for House Wiring, ad hoc usage)	10.0%
+Home - Other products	18.0%
+Home Improvement -
+
+Wallpapers & Wallpaper Accessories
+
+13.0% for item price <= 1,000
+
+9.0% for item price >1,000
+
+Wall Paints and Tools	
+9% for item price <=300
+
+6% for item price >300
+
+Home Improvement Accessories	13.5%
+Safes and Lockers with Locking Mechanism	12.0%
+Home improvement - Kitchen & Bath (Fittings, accessories), Cleaning Supplies, Electricals, Hardware, Building Materials	
+5.0% for item price <= 300
+
+12.0% for item price > 300
+
+Ladders	9.0%
+Home Safety & Security Systems	6.0%
+Home Improvement - Other products	13.5%
+Lawn & Garden - Commercial Agricultural Products	3.0%
+Lawn & Garden - Solar Panels	6.0%
+Lawn & Garden - Leaf Blower and Water Pump	6.5%
+Lawn & Garden - Solar Devices, Inverters, Charge Controller, Battery, Lights, Solar Gadgets	8.0%
+Lawn & Garden - Chemical Pest Control, Mosquito Nets, Bird Control, Plant Protection, Foggers	
+7.0% for item price <= 1,000
+
+9.0% for item price > 1,000
+
+Lawn & Garden - Outdoor equipments, Saws, Lawn Mowers, Cultivator, Tiller, String Trimmers, Generators, Barbeque Grills, Greenhouses	6.5%
+Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools	
+9.5% for item price <= 500
+
+11.0% for item price > 500
+
+Lawn and Garden - Other products	
+9.0% for item price <= 300
+
+10.0% for item price > 300 and <= 15,000
+
+5% for item price > 15,000
+
+Automotive - Tyres & Rims	
+5.0% for item price <=500
+
+7.0% for item price >500
+
+Automotive - Batteries and Air Fresheners	
+6.5% for item price <=500
+
+7.5% for item price >500 and <=1,000
+
+8.5% for item price >1,000
+
+Automotive Accessories - Floor Mats, Seat, Car and Bike Covers	
+14.0% for item price <= 1,000
+
+15.5% for item price > 1,000
+
+Automotive Helmets and Riding Gloves	
+6.5% for item price <= 500
+
+8.5% for item price > 500
+
+Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicle	5.0%
+Automotive - Car and Bike Parts, Brakes, Styling and Body Fittings, Transmission, Engine Parts, Exhaust Systems, Interior Fitting, Suspension and Wipers	
+13.0% for item price <= 500
+
+14.0% for item price > 500
+
+Vehicle Tools and Appliances	
+6.5% for item price <=300
+
+7.5% for item price >300 and <=500
+
+8.5% for item price > 500
+
+Oils, Lubricants	8.5%
+Automotive - Cleaning Kits, Sponges, Brush, Duster, Cloths and Liquids, Car Interior and Exterior Care, Waxes, Polish, Shampoo, Car and Bike, Lighting and Paints	
+9.0% for item price <= 500
+
+12.0% for item price > 500
+
+Automotive - Other products	15.0%
+Major Appliances Accessories	16.0%
+Chimneys	9.5%
+Refrigerators	5.0%
+Major Appliances - Other products	5.5%
+Mattresses	
+25.5% for item price <=1000
+
+16% for item price >1000 and <=20000
+
+13.5% for item price >20000
+
+Bean Bags & Inflatables	11.0%
+Furniture - Other products	
+15.5% for item price <= 15,000
+
+11.0% for item price > 15,000
+
+Business & Scientific Supplies	
+11.0% for item price <=300
+
+11.5% for item price >300 and <=15000
+
+7.0% for item price > 15,000
+
+3D_Printers	11.0%
+Business and Industrial Supplies - Electrical Testing, Dimensional Measurement, Thermal Printers and Barcode Scanners	5.0%
+Business & Industrial Supplies – Commercial, Food Handling Equipment and Health Supplies	5.5%
+Stethoscopes	9.5%
+Packing Materials	5.0%
+Power & Hand Tools and Water Dispenser	10.0%
+Masks	7.0%
+Business & Industrial Supplies - Other products	
+8.0% for item price <= 15,000
+
+5.0% for item price > 15,000
+
+Bicycles	
+11.0% for item price <=300
+
+6.5% for item price >300 and <=500
+
+7.0% for item price >500 and <=1,000
+
+6.0% for item price >1,000
+
+Gym Equipments	
+6.0% for item price <= 300
+
+8.0% for item price > 300 and <= 500
+
+10.0% for item price > 500 and <= 1,000
+
+12.0% for item price > 1,000
+
+Sports - Footwear	
+14.0% for item price <= 500
+
+14.5% for item price >500 and <=1,000
+
+16.0% for item price > 1,000
+
+Sports - Cricket & Badminton Equipments, Tennis, Table Tennis, Squash, Football, Volleyball, Basketball, Throwball and Swimming	
+5.0% for item price <= 300
+
+6.0% for item price > 300 and <= 500
+
+8.0% for item price > 500 and <=1,000
+
+8.5% for item price >1,000
+
+Sports - Other products	
+5.0% for item price <= 300
+
+9.0% for item price > 300 and <= 500
+
+13.0% for item price > 500
+
+Sports Collectibles	
+13.0% for item price <= 300
+
+17.0% for item price > 300
+
+Consumable Physical Gift Card	5.0%
+Entertainment Collectibles	
+13.0% for item price <= 300
+
+17.0% for item price > 300
+
+Coins Collectibles	15.0%
+
+
+main Category: CE / PC / Wireless
+Mobile Phones	5.5%
+Tablets	
+6.0% for item price <=12,000
+
+9% for item price >12,000
+
+Laptops	
+6.0% for item price <= 70,000
+
+7.0% for item price > 70,000
+
+Scanners & Printers	9.0%
+PC Components - RAM & Motherboards	5.5%
+Desktops	8.0%
+Monitors	6.5%
+Laptop & Camera Battery	14.0%
+Laptop Bags & Sleeves	
+12.0% for item price <= 500
+
+13.0% for item price > 500
+
+USB Flash Drives - Pen Drives	16.0%
+Hard Disks	9.5%
+Kindle Accessories	25.0%
+Memory Cards	16.0%
+Modems & Networking Devices	14.0%
+Car Electronics Devices	
+7.5% for item price <=500
+
+9.5% for item price >500 and <=1,000
+
+10% for item price >1000
+
+Car Electronics Accessories	
+10.5% for item price <=500
+
+11% for item price >500 and <=1,000
+
+13% for item price >1,000
+
+Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices and Speakers)	9.0%
+Landline Phones	7.0%
+Smart Watches & Accessories	15.5%
+Television	6.0%
+Camera & Camcorder	5.0%
+Camera Lenses	7.0%
+Camera Accessories	
+11.0% for item price <=500
+
+13% for item price >500 and <=1,000
+
+13.5% for item price >1,000
+
+GPS Devices	13.5%
+Speakers	11.0%
+Headsets, Headphones & Earphones	18.0%
+Computer & Laptop - Keyboards & Mouse	
+14.0% for item price <=2800
+
+17% for item price >2800
+
+Power Banks & Chargers	
+20.0% for item price <=1,000
+
+20.5% for item price >1,000
+
+Accessories - Electronics, PC & Wireless	17.0%
+Cases, Covers and Skins & Screen Guards	
+3.0% for item price <= 150
+
+19.0% for item price > 150 and <= 300
+
+23.0% for item price > 300 and <= 500
+
+25.0% for item price > 500
+
+Cables & Adaptors - Electronics, PC and Wireless	
+22.0% for item price <=300
+
+17.0% for item price >300 and <=500
+
+20.0% for item price >500
+
+Car Cradles, Lens Kits & Tablet Cases	
+19.0% for item price <= 500
+
+25.0% for item price > 500 and <=1,000
+
+27% for item price >1,000
+
+Warranty Services	30.0%
+Office Products - Arts and Crafts	
+10.0% for item price <=500
+
+11.0% for item price >500 and <=1,000
+
+12.5% for item price >1,000
+
+Office Products - Office Supplies	
+10.0% for item price <=500
+
+11.0% for item price >500 and <=1,000
+
+12.5% for item price >1,000
+
+Office Products - Writing Instruments	
+10.0% for item price <=300
+
+11.0% for item price >300 and <=1,000
+
+12.5% for item price >1,000
+
+Office - Electronic Devices	
+9.5% for item price <=1,000
+
+10.5% for item price >1,000
+
+Office - Other products	
+10.0% for item price <= 500
+
+10.5% for item price >500 and <=1,000
+
+11.5% for item price > 1,000
+
+Projectors, Home Theatre Systems, Binoculars and Telescopes	6.0%
+Musical Instruments - Guitars	10%
+Musical Instruments - Keyboards	8.0%
+Musical Instruments - Microphones	9.5%
+Musical Instruments - DJ & VJ Equipment, Recording and Computer, Cables & Leads and PA & Stage	10.5%
+Musical Instruments - Other products	10.5%
