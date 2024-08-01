@@ -60,28 +60,40 @@
             margin-left: auto;
         }
 
-
-        .dropdown-container {
+/* dropdown CSS */
+    .dropdown-container {
             position: relative;
             display: inline-block;
+            width: 100%;
+            max-width: 300px;
+        }
+        .dropdown-container input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 230px;
-            max-height: 200px; /* Adjust this value to set the visible height */
+            background-color: #fff;
+            min-width: 100%;
+            max-height: 200px;
             overflow-y: auto;
             border: 1px solid #ccc;
+            border-top: none;
             z-index: 1;
-        }
-        .dropdown-content input {
-            width: 100%;
-            box-sizing: border-box;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .dropdown-content div {
-            padding: 12px;
+            padding: 10px;
             cursor: pointer;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .dropdown-content div:last-child {
+            border-bottom: none;
         }
         .dropdown-content div:hover {
             background-color: #f1f1f1;
@@ -104,7 +116,7 @@
                     </span>
                 </h5>
                 <div class="dropdown-container">
-                    <input type="text" placeholder="Search Subcategory" id="categorySearch" onkeyup="filterFunction()">
+                    <input type="text" placeholder="🔎️ Search Category... ▼" aria-label="Search" id="categorySearch" onkeyup="filterFunction()">
                     <div id="categoryDropdown" class="dropdown-content">
                         <!-- Dropdown options will be populated here -->
                     </div>
