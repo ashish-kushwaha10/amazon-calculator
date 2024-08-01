@@ -12,22 +12,6 @@
 
 
 
-.tooltip-font{
-    font-size: 15px;
-}
-.calculate-btn{
-    padding: 10px 25px;
-    background-color: rgb(219, 177, 24);
-    color: black;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-
-
-
-
-
 
 body {
     margin: 0;
@@ -91,38 +75,100 @@ body {
   
   /* Style the table */
   table {
-    font-family: Arial, sans-serif;
+    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px;
-  }
-  
-  th,
-  td {
+}
+
+td,
+th {
     border: 1px solid #dddddd;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-  
-  /* Style the buttons */
-  /* button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+input[type='number'] {
+    width: 5rem;
+}
+
+input::placeholder {
+    text-align: right;
+    /* for Chrome, Firefox, Opera */
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 6px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
     border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #fff;
+}
+
+input[type="number"]:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+input[type="number"] {
+    max-width: 200px;
+    margin-left: auto;
+}
+
+/* dropdown CSS */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+}
+.dropdown-container input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.dropdown-content div {
+    padding: 10px;
     cursor: pointer;
-  }
-   */
+    border-bottom: 1px solid #eaeaea;
+}
+.dropdown-content div:last-child {
+    border-bottom: none;
+}
+.dropdown-content div:hover {
+    background-color: #f1f1f1;
+}
+.show {
+    display: block;
+}
+
   /* Style the calculate button */
   .calculate-btn {
     margin-top: 20px;
-    /* width: 100%; */
+    padding: 10px 25px;
     border: 2px solid black;
     background-color: #ff9900;
     border-radius: 15px;
@@ -138,6 +184,7 @@ body {
   
   /* Tooltip style */
   .tooltip-font {
+    font-size: 15px;
     cursor: pointer;
   }
   
