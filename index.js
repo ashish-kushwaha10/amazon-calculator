@@ -1442,37 +1442,11 @@ function filterFunction() {
     }
     categoryDropdown.classList.add('show');
 
-    // Limit the visible items to 10
-    var visibleCount = 0;
-    for (var i = 0; i < divs.length; i++) {
-        if (divs[i].style.display !== 'none') {
-            visibleCount++;
-            if (visibleCount > 10) {
-                divs[i].style.display = 'none';
-            }
-        }
-    }
 }
 
-// Show all items on initial load and when input is cleared
-function showAllCategories() {
-    var divs = categoryDropdown.getElementsByTagName('div');
-    for (var i = 0; i < divs.length; i++) {
-        if (i < 10) {
-            divs[i].style.display = '';
-        } else {
-            divs[i].style.display = 'none';
-        }
-    }
-    categoryDropdown.classList.add('show');
-}
 
 categorySearch.addEventListener('input', function() {
-    if (categorySearch.value === "") {
-        showAllCategories();
-    } else {
         filterFunction();
-    }
 });
 
 // Close the dropdown if the user clicks outside of it
