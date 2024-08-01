@@ -27,8 +27,7 @@ let excludedshippingRegionalId = document.getElementById('excluded-regional-ship
 let excludedshippingNationalId = document.getElementById('excluded-national-shipping');
 
 
-var referralFeesByCategory = {
-    "Media": [
+var referralFeesByCategory = [
         {
             "School Textbook Bundles": {
                 "referralPercentage": {
@@ -134,9 +133,7 @@ var referralFeesByCategory = {
                     "maxPercentage": 12.5
                 }
             }
-        }
-    ],
-    "Consumables": [
+        },
         {
             "Pet - Other products": {
                 "referralPercentage": {
@@ -428,8 +425,8 @@ var referralFeesByCategory = {
                 }
             }
         }
-    ],
-    "Softline": [
+    ,
+    
         {
             "Apparel - Women’s Innerwear and Lingerie": {
                 "referralPercentage": {
@@ -669,8 +666,8 @@ var referralFeesByCategory = {
                 }
             }
         }
-    ],
-    "Other Hardline": [
+    ,
+  
         {
             "Kitchen Tools & Supplies - Choppers, Knives, Bakeware & Accessories": {
                 "referralPercentage": {
@@ -1051,8 +1048,8 @@ var referralFeesByCategory = {
                 }
             }
         }
-    ],
-    "CE / PC / Wireless": [
+    ,
+    
         {
             "Mobile Phones": {
                 "referralPercentage": {
@@ -1302,8 +1299,8 @@ var referralFeesByCategory = {
                 }
             }
         }
-    ],
-    "Office Products": [
+    ,
+   
         {
             "Office Products - Arts and Crafts": {
                 "referralPercentage": {
@@ -1355,8 +1352,8 @@ var referralFeesByCategory = {
                 }
             }
         }
-    ],
-    "Musical Instruments": [
+    ,
+    
         {
             "Musical Instruments - Guitars": {
                 "referralPercentage": {
@@ -1392,39 +1389,117 @@ var referralFeesByCategory = {
                 }
             }
         }
-    ]
-};
+    
+    ];
 
 
-// for making submenu by selecting fromo main menu
-function makeSubmenu(value) {
-    if (value.length == 0) document.getElementById("categorySelect").innerHTML = "<option></option>";
-    else {
-        var subMenu = "";
-        for (let categoryId in referralFeesByCategory[value]) {
-            subMenu += "<option>" + Object.keys(referralFeesByCategory[value][categoryId]) + "</option>";
+
+// Assume referralFeesByCategory is already defined
+var selectedReferralPercentages = {};
+
+// Populate the dropdown
+var categoryDropdown = document.getElementById('categoryDropdown');
+var categorySearch = document.getElementById('categorySearch');
+
+referralFeesByCategory.forEach(function(category) {
+    for (var key in category) {
+        if (category.hasOwnProperty(key)) {
+            var div = document.createElement('div');
+            div.textContent = key;
+            div.setAttribute('data-value', key);
+            div.addEventListener('click', function() {
+                categorySearch.value = key;
+                updateReferralPercentages(key);
+                categoryDropdown.classList.remove('show');
+            });
+            categoryDropdown.appendChild(div);
         }
-        document.getElementById("categorySelect").innerHTML = subMenu;
+    }
+});
+
+// Function to update selectedReferralPercentages when a category is selected
+function updateReferralPercentages(selectedCategory) {
+    referralFeesByCategory.forEach(function(category) {
+        if (category.hasOwnProperty(selectedCategory)) {
+            selectedReferralPercentages = category[selectedCategory].referralPercentage;
+        }
+    });
+}
+
+// Function to filter the dropdown based on the search input
+function filterFunction() {
+    var filter = categorySearch.value.toLowerCase();
+    var divs = categoryDropdown.getElementsByTagName('div');
+    var count = 0;
+    for (var i = 0; i < divs.length; i++) {
+        var txtValue = divs[i].textContent || divs[i].innerText;
+        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+            divs[i].style.display = '';
+            count++;
+        } else {
+            divs[i].style.display = 'none';
+        }
+    }
+    categoryDropdown.classList.add('show');
+
+    // Limit the visible items to 10
+    var visibleCount = 0;
+    for (var i = 0; i < divs.length; i++) {
+        if (divs[i].style.display !== 'none') {
+            visibleCount++;
+            if (visibleCount > 10) {
+                divs[i].style.display = 'none';
+            }
+        }
     }
 }
+
+// Show all items on initial load and when input is cleared
+function showAllCategories() {
+    var divs = categoryDropdown.getElementsByTagName('div');
+    for (var i = 0; i < divs.length; i++) {
+        if (i < 10) {
+            divs[i].style.display = '';
+        } else {
+            divs[i].style.display = 'none';
+        }
+    }
+    categoryDropdown.classList.add('show');
+}
+
+categorySearch.addEventListener('input', function() {
+    if (categorySearch.value === "") {
+        showAllCategories();
+    } else {
+        filterFunction();
+    }
+});
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('#categorySearch')) {
+        categoryDropdown.classList.remove('show');
+    }else{
+        categoryDropdown.classList.add('show');
+    }
+}
+
+
+
+
+
+
+
+
 // variable declaration
-let selectedCategory, selectedSubCategories, sellingPrice, costPrice, referralPercentage, referalFeePercentageValue,
+let selectedCategory, selectedSubCategories, sellingPrice, costPrice, referalFeePercentageValue,
     closingFee, productGST;
 
 let productVolume, volumetricWeight, productWeight;
 
 
 function calculateResult() {
-    let selectedCategory = document.getElementById("category").value;
-    let SubCategories = document.getElementById("categorySelect").value;
-    // alert(selectedCategory + "\n" + SubCategories);
-
-    for (let categoryId in referralFeesByCategory[selectedCategory]) {
-        if (Object.keys(referralFeesByCategory[selectedCategory][categoryId]) == SubCategories) {
-            referralPercentage = ((referralFeesByCategory[selectedCategory][categoryId])[SubCategories]).referralPercentage
-
-        }
-    }
+    console.log({selectedReferralPercentages})
     sellingPrice = Number(sellingP.value);
     costPrice = Number(costPriceId.value);
     productGST = Number(gst.value);
@@ -1442,25 +1517,25 @@ function calculateResult() {
 
 
 
-    let range = Object.keys(referralPercentage) // getting range 
+    let range = Object.keys(selectedReferralPercentages) // getting range 
     for (let i = 0; i < range.length ; i++) {
         if (!Number(sellingPrice)) {
             alert("please enter selling price")
             return;
         }
         else if(range.length == 1){
-            console.log({referralPercentage})
-            referalFeePercentageValue = referralPercentage[range[0]]
+            console.log({selectedReferralPercentages})
+            referalFeePercentageValue = selectedReferralPercentages[range[0]]
         }
         else if (Number(sellingPrice) <= Number(range[i])) {
             console.log(sellingPrice, "<=", range[i]) // 
-            console.log(referralPercentage[range[i]]); // value of range 
-            referalFeePercentageValue = referralPercentage[range[i]]  // assigning value of range in this variable
+            console.log(selectedReferralPercentages[range[i]]); // value of range 
+            referalFeePercentageValue = selectedReferralPercentages[range[i]]  // assigning value of range in this variable
             break;
         }
         else if (Number(sellingPrice) > Number(range[range.length - 2])) {
             console.log(sellingPrice, ">", range[range.length - 2]);
-            referalFeePercentageValue = referralPercentage[range[range.length - 1]]
+            referalFeePercentageValue = selectedReferralPercentages[range[range.length - 1]]
             console.log("out of range");
             break;
         }

@@ -59,6 +59,36 @@
             max-width: 200px;
             margin-left: auto;
         }
+
+
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 230px;
+            max-height: 200px; /* Adjust this value to set the visible height */
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            z-index: 1;
+        }
+        .dropdown-content input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .dropdown-content div {
+            padding: 12px;
+            cursor: pointer;
+        }
+        .dropdown-content div:hover {
+            background-color: #f1f1f1;
+        }
+        .show {
+            display: block;
+        }
     </style>
 </head>
 
@@ -68,35 +98,17 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-5">
-                <h5>1) Select Category
+                <h5>Select Category
                     <span>
-                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right" title="Tooltip on top"></i>
                     </span>
                 </h5>
-
-
-                <select id="category" size="1" onchange="makeSubmenu(this.value)">
-                    <option value="" disabled selected>Choose Category</option>
-                    <option>Media</option>
-                    <option>Consumables</option>
-                    <option>Softline</option>
-                    <option>Other Hardline</option>
-                    <option>CE / PC / Wireless</option>
-                    <option>Office Products</option>
-                    <option>Musical Instruments</option>
-                </select>
-                <br><br>
-                <h5>2) Select Subcategory
-                    <span>
-                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
-                    </span>
-                </h5>
-                <select id="categorySelect" size="1">
-                    <option value="" disabled selected> Choose Subcategory </option>
-                    <option></option>
-                </select>
+                <div class="dropdown-container">
+                    <input type="text" placeholder="Search Subcategory" id="categorySearch" onkeyup="filterFunction()">
+                    <div id="categoryDropdown" class="dropdown-content">
+                        <!-- Dropdown options will be populated here -->
+                    </div>
+                </div>
 
 
 
