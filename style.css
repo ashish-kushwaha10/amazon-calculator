@@ -263,7 +263,7 @@ input[type="number"] {
     }
   }
 
-  #discount-input, #return-input, #excluded-shipping{
+  #discount-input, #return-input, #excluded-shipping, #volumetric-weight{
     display: none;
   }
   

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-       
+
     </style>
 </head>
 
@@ -23,11 +23,13 @@
             <div class="col-lg-5">
                 <h5>Select Category
                     <span>
-                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right" title="Tooltip on top"></i>
+                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Tooltip on top"></i>
                     </span>
                 </h5>
                 <div class="dropdown-container">
-                    <input type="text" placeholder="🔎️ Search Category... ▼" aria-label="Search" id="categorySearch" onkeyup="filterFunction()">
+                    <input type="text" placeholder="🔎️ Search Category... ▼" aria-label="Search" id="categorySearch"
+                        onkeyup="filterFunction()">
                     <div id="categoryDropdown" class="dropdown-content">
                         <!-- Dropdown options will be populated here -->
                     </div>
@@ -58,8 +60,8 @@
                     <span> Yes <label for="YES"><input name="shippingExcluded" id="isShippingExcluded"
                                 onclick="showInputBlock('excluded-shipping')" type="radio"> No
                         </label>
-                        <label for="NO"> <input name="shippingExcluded"
-                                onclick="hideInputBlock('excluded-shipping')" type="radio"></label>
+                        <label for="NO"> <input name="shippingExcluded" onclick="hideInputBlock('excluded-shipping')"
+                                type="radio"></label>
                     </span>
                 </p>
                 <p id="excluded-shipping">Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">
@@ -93,9 +95,19 @@
                         Ship by self <input type="radio" name="ship">
                     </h6> -->
                     <p>weight <input id="weight" type="number" placeholder="gram"></p>
-                    <p>hight <input id="height" type="number" placeholder="cm"> Width <input id="width" type="number"
-                            placeholder="cm">
-                        Length <input id="length" type="number" placeholder="cm"></p>
+                    <span>Want to enter the product dimention instead <i class="bi bi-info-circle-fill tooltip-font"
+                            data-toggle="tooltip" data-placement="right" title="Tooltip on top"></i> </span>
+                    <span> Yes <label for="YES"><input name="volumetricWeight" id="vol-weight-id"
+                                onclick="showInputBlock('volumetric-weight')" type="radio"> No
+                        </label>
+                        <label for="NO"> <input name="volumetricWeight" onclick="hideInputBlock('volumetric-weight')"
+                                type="radio"></label>
+                    </span>
+                    <p id="volumetric-weight">hight <input id="height" type="number" placeholder="cm"> Width <input
+                            id="width" type="number" placeholder="cm">
+                        Length <input id="length" type="number" placeholder="cm"> <b><span
+                                id="vol-weight-display"></span></b>
+                    </p>
                 </div>
                 <br>
                 <div>
@@ -174,8 +186,10 @@
                     </tr>
                 </table>
                 <br>
-                <p>A-Amazon Referal fee <button style="border: 1px solid black; width: 5rem;" id="referal-fee">
-                        &#8377;</button></p>
+                <p>A-Amazon Referral fee <button style="border: 1px solid black; width: 5rem;" id="referal-fee">
+                        &#8377;</button>
+                  <b><span id="referal-percentage"></span></b>
+                </p>
                 <p>C-Amazon Closing fee <button style="border: 1px solid black; width: 5rem;" id="closing-fee">
                         &#8377;</button></p>
 

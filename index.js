@@ -1516,6 +1516,9 @@ function calculateResult() {
 
     }
 
+    document.getElementById('referal-percentage').innerHTML = "@ "+referalFeePercentageValue +"%";
+    document.getElementById('referal-percentage').style.color = "red";
+
     // getting actual referal in the output
     let amazonReferalValue = Number(sellingPrice * (referalFeePercentageValue / 100));
     amazonReferalValue = Math.round(amazonReferalValue * 100) / 100
@@ -1548,7 +1551,10 @@ function calculateResult() {
         let length = Number(lengthId.value);
         // productVolume = (height * width * length);
         volumetricWeight = (height * width * length) / 5
-
+        if(volumetricWeight){
+            document.getElementById('vol-weight-display').innerHTML = /*"vol weight " +*/ volumetricWeight;
+            document.getElementById('vol-weight-display').style.color = 'red'
+        }
         // actual Weight in kg
         let weight = Number(weightId.value);
         let shipingWeight = volumetricWeight > weight ? volumetricWeight : weight;
@@ -1859,8 +1865,8 @@ function showInputBlock(idName) {
     let inputBlock = document.getElementById(idName)
 
     inputBlock.style.display = "block"
-
 }
+
 function hideInputBlock(idName) {
     let inputBlock = document.getElementById(idName)
 
