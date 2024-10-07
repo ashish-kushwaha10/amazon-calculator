@@ -28,1370 +28,1062 @@ let excludedshippingNationalId = document.getElementById('excluded-national-ship
 
 
 var referralFeesByCategory = [
-        {
-            "School Textbook Bundles": {
-                "referralPercentage": {
-                    "250": 2.0,
-                    "1000": 3.0,
-                    "1500": 4.0,
-                    "maxPercentage": 4.5
-                }
-            }
-        },
-        {
-            "Books": {
-                "referralPercentage": {
-                    "250": 3.0,
-                    "500": 4.5,
-                    "1000": 9.0,
-                    "maxPercentage": 13.5
-                }
-            }
-        },
-        {
-            "Movies": {
-                "referralPercentage": {
-                    "maxPercentage": 6.5
-                }
-            }
-        },
-        {
-            "Software products": {
-                "referralPercentage": {
-                    "maxPercentage": 9.5
-                }
-            }
-        },
-        {
-            "Music": {
-                "referralPercentage": {
-                    "maxPercentage": 6.5
-                }
-            }
-        },
-        {
-            "Video Games - Consoles": {
-                "referralPercentage": {
-                    "1000": 7.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Video Games - Accessories": {
-                "referralPercentage": {
-                    "500": 10.5,
-                    "maxPercentage": 13.5
-                }
-            }
-        },
-        {
-            "Video Games - Online Game Services": {
-                "referralPercentage": {
-                    "maxPercentage": 2.0
-                }
-            }
-        },
-        {
-            "Video Games - Other products": {
-                "referralPercentage": {
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Toys - Drones": {
-                "referralPercentage": {
-                    "300": 7.5,
-                    "500": 16.0,
-                    "1000": 11.5,
-                    "maxPercentage": 12.0
-                }
-            }
-        },
-        {
-            "Toys - Balloons and Soft Toys": {
-                "referralPercentage": {
-                    "maxPercentage": 11.0
-                }
-            }
-        },
-        {
-            "Toys - Other products": {
-                "referralPercentage": {
-                    "300": 9.0,
-                    "1000": 9.5,
-                    "maxPercentage": 11.5
-                }
-            }
-        },
-        {
-            "Pet Foods": {
-                "referralPercentage": {
-                    "300": 5.5,
-                    "1000": 11.5,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Pet - Other products": {
-                "referralPercentage": {
-                    "300": 2.0,
-                    "500": 11.0,
-                    "maxPercentage": 12.0
-                }
-            }
-        },
-        {
-            "Beauty - Haircare, Bath and Shower": {
-                "referralPercentage": {
-                    "300": 7.5,
-                    "500": 5.0,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Beauty - Make-up": {
-                "referralPercentage": {
-                    "300": 6.0,
-                    "500": 4.5,
-                    "1000": 7.5,
-                    "maxPercentage": 7.0
-                }
-            }
-        },
-        {
-            "Deodorants": {
-                "referralPercentage": {
-                    "300": 8.5,
-                    "1000": 6.5,
-                    "maxPercentage": 7.0
-                }
-            }
-        },
-        {
-            "Facial Steamers": {
-                "referralPercentage": {
-                    "maxPercentage": 7.0
-                }
-            }
-        },
-        {
-            "Beauty - Fragrance": {
-                "referralPercentage": {
-                    "300": 13.5,
-                    "500": 12.5,
-                    "maxPercentage": 14.0
-                }
-            }
-        },
-        {
-            "Face Wash": {
-                "referralPercentage": {
-                    "300": 6.0,
-                    "500": 5.0,
-                    "1000": 9.0,
-                    "maxPercentage": 9.5
-                }
-            }
-        },
-        {
-            "Moisturizer Cream": {
-                "referralPercentage": {
-                    "500": 6.5,
-                    "1000": 9.0,
-                    "maxPercentage": 9.5
-                }
-            }
-        },
-        {
-            "Sunscreen": {
-                "referralPercentage": {
-                    "300": 6.5,
-                    "500": 6.0,
-                    "1000": 9.0,
-                    "maxPercentage": 9.5
-                }
-            }
-        },
-        {
-            "Beauty - Other products": {
-                "referralPercentage": {
-                    "300": 6.5,
-                    "500": 7.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Luxury Beauty": {
-                "referralPercentage": {
-                    "300": 5.0,
-                    "500": 6.0,
-                    "1000": 9.0,
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Health and Household - Medical Equipment, Sexual Wellness, Adult Incontinence, Elderly Care": {
-                "referralPercentage": {
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Health and Household – Sports Nutrition and Meal Replacement Shakes": {
-                "referralPercentage": {
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Health and Household – Ayurvedic, Homeopathic and Alternate Medicine products": {
-                "referralPercentage": {
-                    "500": 6.0,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Health and Household - Household Cleaning, Laundry, Air Fresheners, Personal Hygiene (Hand Wash, Feminine Hygiene and Oral Care)": {
-                "referralPercentage": {
-                    "500": 4.5,
-                    "1000": 7.5,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Health and Household - Vitamins & Mineral Health Supplements": {
-                "referralPercentage": {
-                    "500": 9.0,
-                    "maxPercentage": 10.5
-                }
-            }
-        },
-        {
-            "Health and Household - Other products": {
-                "referralPercentage": {
-                    "maxPercentage": 11.5
-                }
-            }
-        },
-        {
-            "Baby Hardlines - Swings, Bouncers and Rockers, Carriers, Walkers, Baby Safety - Guards and Locks, Baby Room Décor, Baby Furniture, Baby Car Seats and Accessories": {
-                "referralPercentage": {
-                    "300": 6.0,
-                    "500": 8.5,
-                    "1000": 6.0,
-                    "maxPercentage": 7.5
-                }
-            }
-        },
-        {
-            "Baby Strollers": {
-                "referralPercentage": {
-                    "300": 4.0,
-                    "1000": 6.0,
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Baby - Diapers": {
-                "referralPercentage": {
-                    "300": 5.0,
-                    "500": 5.5,
-                    "maxPercentage": 9.5
-                }
-            }
-        },
-        {
-            "Baby - Other products": {
-                "referralPercentage": {
-                    "300": 3.5,
-                    "500": 6.5,
-                    "1000": 9.0,
-                    "maxPercentage": 7.0
-                }
-            }
-        },
-        {
-            "Grocery - Herbs and Spices": {
-                "referralPercentage": {
-                    "300": 4.0,
-                    "1000": 5.5,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Grocery - Dried Fruits and Nuts": {
-                "referralPercentage": {
-                    "1000": 6.0,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Grocery - Hampers and gifting": {
-                "referralPercentage": {
-                    "1000": 9.0,
-                    "maxPercentage": 11.5
-                }
-            }
-        },
-        {
-            "Grocery and Gourmet - Oils": {
-                "referralPercentage": {
-                    "1000": 7.5,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Grocery and Gourmet - Other products": {
-                "referralPercentage": {
-                    "1000": 7.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "OTC Medicine": {
-                "referralPercentage": {
-                    "500": 12.0,
-                    "maxPercentage": 15.0
-                }
-            }
-        },
-        {
-            "Pharmacy - Prescription Medicines": {
-                "referralPercentage": {
-                    "maxPercentage": 6.0
-                }
-            }
-        },
-        {
-            "Personal Care Appliances - Weighing Scales and Fat Analysers": {
-                "referralPercentage": {
-                    "500": 11.0,
-                    "1000": 13.5,
-                    "maxPercentage": 13.0
-                }
-            }
-        },
-        {
-            "Personal Care Appliances - Grooming and Styling": {
-                "referralPercentage": {
-                    "1000": 11.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Personal Care Appliances - Electric Massagers": {
-                "referralPercentage": {
-                    "500": 9.5,
-                    "maxPercentage": 14.5
-                }
-            }
-        },
-        {
-            "Personal Care Appliances - Glucometer and Glucometer Strips": {
-                "referralPercentage": {
-                    "maxPercentage": 5.5
-                }
-            }
-        },
-        {
-            "Personal Care Appliances - Thermometers": {
-                "referralPercentage": {
-                    "500": 12.5,
-                    "maxPercentage": 10.5
-                }
-            }
-        },
-        {
-            "Personal Care Appliances - Other products": {
-                "referralPercentage": {
-                    "300": 7.5,
-                    "500": 10.5,
-                    "1000": 11.0,
-                    "maxPercentage": 7.5
-                }
+    {
+        "School Textbook Bundles": {
+            "referralPercentage": {
+                "250": 2.0,
+                "1000": 3.0,
+                "1500": 4.0,
+                "maxPercentage": 4.5
             }
         }
-    ,
-    
-        {
-            "Apparel - Women’s Innerwear and Lingerie": {
-                "referralPercentage": {
-                    "300": 13.0,
-                    "500": 14.0,
-                    "1000": 19.5,
-                    "maxPercentage": 15.0
-                }
-            }
-        },
-        {
-            "Apparel - Sarees & Dress Materials": {
-                "referralPercentage": {
-                    "500": 14.0,
-                    "1000": 16.5,
-                    "maxPercentage": 23.0
-                }
-            }
-        },
-        {
-            "Apparel - Sweat Shirts and Jackets": {
-                "referralPercentage": {
-                    "500": 8.0,
-                    "1000": 20.0,
-                    "maxPercentage": 24.0
-                }
-            }
-        },
-        {
-            "Apparel Other Innerwear": {
-                "referralPercentage": {
-                    "500": 12.0,
-                    "1000": 16.5,
-                    "maxPercentage": 18.5
-                }
-            }
-        },
-        {
-            "Sleepwear": {
-                "referralPercentage": {
-                    "300": 13.5,
-                    "500": 11.0,
-                    "1000": 16.5,
-                    "maxPercentage": 19.0
-                }
-            }
-        },
-        {
-            "Apparel - Accessories": {
-                "referralPercentage": {
-                    "500": 13.0,
-                    "maxPercentage": 19.0
-                }
-            }
-        },
-        {
-            "Apparel - Men's T-Shirts (except Tank Tops and Full Sleeve Tops)": {
-                "referralPercentage": {
-                    "500": 13.5,
-                    "maxPercentage": 21.0
-                }
-            }
-        },
-        {
-            "Apparel - Ethnic Wear": {
-                "referralPercentage": {
-                    "300": 12.5,
-                    "1000": 7.5,
-                    "maxPercentage": 17.5
-                }
-            }
-        },
-        {
-            "Apparel - Baby": {
-                "referralPercentage": {
-                    "500": 11.0,
-                    "1000": 17.5,
-                    "maxPercentage": 20.0
-                }
-            }
-        },
-        {
-            "Apparel - Shorts": {
-                "referralPercentage": {
-                    "300": 16.5,
-                    "500": 13.5,
-                    "1000": 23.5,
-                    "maxPercentage": 24.0
-                }
-            }
-        },
-        {
-            "Apparel - Other products": {
-                "referralPercentage": {
-                    "500": 11.0,
-                    "1000": 18.5,
-                    "maxPercentage": 19.0
-                }
-            }
-        },
-        {
-            "Eyewear - Sunglasses, Frames and Zero Power Eye Glasses": {
-                "referralPercentage": {
-                    "500": 14.0,
-                    "1000": 15.0,
-                    "maxPercentage": 18.5
-                }
-            }
-        },
-        {
-            "Watches": {
-                "referralPercentage": {
-                    "maxPercentage": 14.0
-                }
-            }
-        },
-        {
-            "Flip Flops": {
-                "referralPercentage": {
-                    "1000": 13.0,
-                    "maxPercentage": 15.0
-                }
-            }
-        },
-        {
-            "Kids Shoes": {
-                "referralPercentage": {
-                    "300": 10.0,
-                    "1000": 14.0,
-                    "maxPercentage": 16.0
-                }
-            }
-        },
-        {
-            "Shoes": {
-                "referralPercentage": {
-                    "500": 15.0,
-                    "1000": 16.0,
-                    "maxPercentage": 16.5
-                }
-            }
-        },
-        {
-            "Wallets": {
-                "referralPercentage": {
-                    "500": 10.0,
-                    "1000": 12.5,
-                    "maxPercentage": 12.0
-                }
-            }
-        },
-        {
-            "Backpacks": {
-                "referralPercentage": {
-                    "500": 12.0,
-                    "maxPercentage": 13.0
-                }
-            }
-        },
-        {
-            "Handbags": {
-                "referralPercentage": {
-                    "500": 10.0,
-                    "1000": 11.0,
-                    "maxPercentage": 12.0
-                }
-            }
-        },
-        {
-            "Luggage - Suitcase & Trolleys": {
-                "referralPercentage": {
-                    "500": 7.5,
-                    "1000": 6.5,
-                    "maxPercentage": 5.5
-                }
-            }
-        },
-        {
-            "Luggage - Travel Accessories": {
-                "referralPercentage": {
-                    "300": 12.0,
-                    "500": 9.0,
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Luggage - Other products": {
-                "referralPercentage": {
-                    "300": 6.0,
-                    "500": 9.0,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Silver Jewellery": {
-                "referralPercentage": {
-                    "1000": 10.5,
-                    "maxPercentage": 13.0
-                }
-            }
-        },
-        {
-            "Silver coins and Bars": {
-                "referralPercentage": {
-                    "maxPercentage": 3.0
-                }
-            }
-        },
-        {
-            "Fine Jewellery - Unstudded and Solitaire": {
-                "referralPercentage": {
-                    "maxPercentage": 5.0
-                }
-            }
-        },
-        {
-            "Fine Jewellery - Studded": {
-                "referralPercentage": {
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Fine Jewellery - Gold Coins": {
-                "referralPercentage": {
-                    "maxPercentage": 5.0
-                }
-            }
-        },
-        {
-            "Fashion Jewellery": {
-                "referralPercentage": {
-                    "1000": 22.5,
-                    "maxPercentage": 24.0
-                }
+    },
+    {
+        "Books": {
+            "referralPercentage": {
+                "250": 3.0,
+                "500": 4.5,
+                "1000": 9.0,
+                "maxPercentage": 13.5
             }
         }
-    ,
-  
-        {
-            "Kitchen Tools & Supplies - Choppers, Knives, Bakeware & Accessories": {
-                "referralPercentage": {
-                    "300": 5.0,
-                    "1000": 11.5,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Cookware, Tableware and Dinnerware": {
-                "referralPercentage": {
-                    "500": 7.0,
-                    "1000": 9.0,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Kitchen - Glassware and Ceramicware": {
-                "referralPercentage": {
-                    "300": 6.0,
-                    "1000": 11.0,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Gas Stoves and Pressure Cookers": {
-                "referralPercentage": {
-                    "1500": 6.0,
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Small Appliances": {
-                "referralPercentage": {
-                    "5000": 6.5,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Fans and Robotic Vacuums": {
-                "referralPercentage": {
-                    "3000": 6.5,
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Water Purifier and Accessories": {
-                "referralPercentage": {
-                    "5000": 6.5,
-                    "maxPercentage": 7.5
-                }
-            }
-        },
-        {
-            "Water Heaters and Accessories": {
-                "referralPercentage": {
-                    "5000": 8.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Inverter and Batteries": {
-                "referralPercentage": {
-                    "maxPercentage": 4.5
-                }
-            }
-        },
-        {
-            "Cleaning and Home Appliances": {
-                "referralPercentage": {
-                    "5000": 7.5,
-                    "maxPercentage": 8.5
-                }
-            }
-        },
-        {
-            "Containers, Boxes, Bottles and Kitchen Storage": {
-                "referralPercentage": {
-                    "300": 5.0,
-                    "500": 7.5,
-                    "maxPercentage": 12.0
-                }
-            }
-        },
-        {
-            "Slipcovers and Kitchen Linens": {
-                "referralPercentage": {
-                    "maxPercentage": 15.5
-                }
-            }
-        },
-        {
-            "Kitchen - Other products": {
-                "referralPercentage": {
-                    "300": 6.0,
-                    "1000": 11.5,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Wall Art": {
-                "referralPercentage": {
-                    "300": 5.0,
-                    "maxPercentage": 13.5
-                }
-            }
-        },
-        {
-            "Home Fragrance and Candles": {
-                "referralPercentage": {
-                    "500": 7.5,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Home Furnishing (Excluding Curtain and Curtain Accessories)": {
-                "referralPercentage": {
-                    "maxPercentage": 11.0
-                }
-            }
-        },
-        {
-            "Bedsheets, Blankets and Covers": {
-                "referralPercentage": {
-                    "500": 6.0,
-                    "1000": 9.0,
-                    "maxPercentage": 8.5
-                }
-            }
-        },
-        {
-            "Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage)": {
-                "referralPercentage": {
-                    "300": 10.0,
-                    "1000": 14.0,
-                    "maxPercentage": 15.0
-                }
-            }
-        },
-        {
-            "Home - Waste and Recycling": {
-                "referralPercentage": {
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Craft Materials": {
-                "referralPercentage": {
-                    "500": 2.0,
-                    "maxPercentage": 5.0
-                }
-            }
-        },
-        {
-            "Home Decor Products": {
-                "referralPercentage": {
-                    "300": 7.0,
-                    "maxPercentage": 17.0
-                }
-            }
-        },
-        {
-            "Clocks": {
-                "referralPercentage": {
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "LED Bulbs and Battens": {
-                "referralPercentage": {
-                    "300": 9.0,
-                    "maxPercentage": 14.0
-                }
-            }
-        },
-        {
-            "Indoor Lighting - Wall, Ceiling Fixture Lights, Lamp Bases, Lamp Shades and Smart Lighting": {
-                "referralPercentage": {
-                    "2000": 14.5,
-                    "maxPercentage": 11.5
-                }
-            }
-        },
-        {
-            "Indoor Lighting - Other products": {
-                "referralPercentage": {
-                    "500": 13.0,
-                    "maxPercentage": 16.0
-                }
-            }
-        },
-        {
-            "Cushion Covers": {
-                "referralPercentage": {
-                    "500": 8.0,
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Curtains and Curtain Accessories": {
-                "referralPercentage": {
-                    "300": 15.5,
-                    "maxPercentage": 16.5
-                }
-            }
-        },
-        {
-            "Rugs and Doormats": {
-                "referralPercentage": {
-                    "1000": 10.5,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Doors and Windows (Wooden, Metal, PVC / UPVC Doors & Windows)": {
-                "referralPercentage": {
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Sanitaryware - Toilets, Bathtubs, Basins / Sinks, Bath Mirrors & Vanities, and Shower Enclosures / Partitions": {
-                "referralPercentage": {
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Tiles & Flooring Accessories": {
-                "referralPercentage": {
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Wires (Electrical Wires / Cables for House Wiring, ad hoc usage)": {
-                "referralPercentage": {
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Home - Other products": {
-                "referralPercentage": {
-                    "maxPercentage": 18.0
-                }
-            }
-        },
-        {
-            "Home Improvement - Wallpapers & Wallpaper Accessories": {
-                "referralPercentage": {
-                    "1000": 13.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Wall Paints and Tools": {
-                "referralPercentage": {
-                    "300": 9.0,
-                    "maxPercentage": 6.0
-                }
-            }
-        },
-        {
-            "Home Improvement Accessories": {
-                "referralPercentage": {
-                    "maxPercentage": 13.5
-                }
-            }
-        },
-        {
-            "Safes and Lockers with Locking Mechanism": {
-                "referralPercentage": {
-                    "maxPercentage": 12.0
-                }
-            }
-        },
-        {
-            "Home improvement - Kitchen & Bath (Fittings, accessories), Cleaning Supplies, Electricals, Hardware, Building Materials": {
-                "referralPercentage": {
-                    "300": 5.0,
-                    "maxPercentage": 12.0
-                }
-            }
-        },
-        {
-            "Ladders": {
-                "referralPercentage": {
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Home Safety & Security Systems": {
-                "referralPercentage": {
-                    "maxPercentage": 6.0
-                }
-            }
-        },
-        {
-            "Home Improvement - Other products": {
-                "referralPercentage": {
-                    "maxPercentage": 13.5
-                }
-            }
-        },
-        {
-            "Lawn & Garden - Commercial Agricultural Products": {
-                "referralPercentage": {
-                    "maxPercentage": 3.0
-                }
-            }
-        },
-        {
-            "Lawn & Garden - Solar Panels": {
-                "referralPercentage": {
-                    "maxPercentage": 6.0
-                }
-            }
-        },
-        {
-            "Lawn & Garden - Leaf Blower and Water Pump": {
-                "referralPercentage": {
-                    "maxPercentage": 6.5
-                }
-            }
-        },
-        {
-            "Lawn & Garden - Solar Devices, Inverters, Charge Controller, Battery, Lights, Solar Gadgets": {
-                "referralPercentage": {
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Lawn & Garden - Chemical Pest Control, Mosquito Nets, Bird Control, Plant Protection, Foggers": {
-                "referralPercentage": {
-                    "1000": 7.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Lawn & Garden - Outdoor equipments, Saws, Lawn Mowers, Cultivator, Tiller, String Trimmers, Generators, Barbeque Grills, Greenhouses": {
-                "referralPercentage": {
-                    "maxPercentage": 6.5
-                }
-            }
-        },
-        {
-            "Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools": {
-                "referralPercentage": {
-                    "500": 9.5,
-                    "maxPercentage": 11.0
-                }
-            }
-        },
-        {
-            "Lawn and Garden - Other products": {
-                "referralPercentage": {
-                    "300": 9.0,
-                    "15000": 10.0,
-                    "maxPercentage": 5.0
-                }
+    },
+    {
+        "Movies": {
+            "referralPercentage": {
+                "maxPercentage": 6.5
             }
         }
-    ,
-    
-        {
-            "Mobile Phones": {
-                "referralPercentage": {
-                    "maxPercentage": 5.5
-                }
-            }
-        },
-        {
-            "Tablets": {
-                "referralPercentage": {
-                    "12000": 6.0,
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Laptops": {
-                "referralPercentage": {
-                    "70000": 6.0,
-                    "maxPercentage": 7.0
-                }
-            }
-        },
-        {
-            "Scanners & Printers": {
-                "referralPercentage": {
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "PC Components - RAM & Motherboards": {
-                "referralPercentage": {
-                    "maxPercentage": 5.5
-                }
-            }
-        },
-        {
-            "Desktops": {
-                "referralPercentage": {
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Monitors": {
-                "referralPercentage": {
-                    "maxPercentage": 6.5
-                }
-            }
-        },
-        {
-            "Laptop & Camera Battery": {
-                "referralPercentage": {
-                    "maxPercentage": 14.0
-                }
-            }
-        },
-        {
-            "Laptop Bags & Sleeves": {
-                "referralPercentage": {
-                    "500": 12.0,
-                    "maxPercentage": 13.0
-                }
-            }
-        },
-        {
-            "USB Flash Drives - Pen Drives": {
-                "referralPercentage": {
-                    "maxPercentage": 16.0
-                }
-            }
-        },
-        {
-            "Hard Disks": {
-                "referralPercentage": {
-                    "maxPercentage": 9.5
-                }
-            }
-        },
-        {
-            "Kindle Accessories": {
-                "referralPercentage": {
-                    "maxPercentage": 25.0
-                }
-            }
-        },
-        {
-            "Memory Cards": {
-                "referralPercentage": {
-                    "maxPercentage": 16.0
-                }
-            }
-        },
-        {
-            "Modems & Networking Devices": {
-                "referralPercentage": {
-                    "maxPercentage": 14.0
-                }
-            }
-        },
-        {
-            "Car Electronics Devices": {
-                "referralPercentage": {
-                    "500": 7.5,
-                    "1000": 9.5,
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Car Electronics Accessories": {
-                "referralPercentage": {
-                    "500": 10.5,
-                    "1000": 11.0,
-                    "maxPercentage": 13.0
-                }
-            }
-        },
-        {
-            "Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices and Speakers)": {
-                "referralPercentage": {
-                    "maxPercentage": 9.0
-                }
-            }
-        },
-        {
-            "Landline Phones": {
-                "referralPercentage": {
-                    "maxPercentage": 7.0
-                }
-            }
-        },
-        {
-            "Smart Watches & Accessories": {
-                "referralPercentage": {
-                    "maxPercentage": 15.5
-                }
-            }
-        },
-        {
-            "Television": {
-                "referralPercentage": {
-                    "maxPercentage": 6.0
-                }
-            }
-        },
-        {
-            "Camera & Camcorder": {
-                "referralPercentage": {
-                    "maxPercentage": 5.0
-                }
-            }
-        },
-        {
-            "Camera Lenses": {
-                "referralPercentage": {
-                    "maxPercentage": 7.0
-                }
-            }
-        },
-        {
-            "Camera Accessories": {
-                "referralPercentage": {
-                    "500": 11.0,
-                    "1000": 13.0,
-                    "maxPercentage": 13.5
-                }
-            }
-        },
-        {
-            "GPS Devices": {
-                "referralPercentage": {
-                    "maxPercentage": 13.5
-                }
-            }
-        },
-        {
-            "Speakers": {
-                "referralPercentage": {
-                    "maxPercentage": 11.0
-                }
-            }
-        },
-        {
-            "Headsets, Headphones & Earphones": {
-                "referralPercentage": {
-                    "maxPercentage": 18.0
-                }
-            }
-        },
-        {
-            "Computer & Laptop - Keyboards & Mouse": {
-                "referralPercentage": {
-                    "2800": 14.0,
-                    "maxPercentage": 17.0
-                }
-            }
-        },
-        {
-            "Power Banks & Chargers": {
-                "referralPercentage": {
-                    "1000": 20.0,
-                    "maxPercentage": 20.5
-                }
-            }
-        },
-        {
-            "Accessories - Electronics, PC & Wireless": {
-                "referralPercentage": {
-                    "maxPercentage": 17.0
-                }
-            }
-        },
-        {
-            "Cases, Covers and Skins & Screen Guards": {
-                "referralPercentage": {
-                    "150": 3.0,
-                    "300": 19.0,
-                    "500": 23.0,
-                    "maxPercentage": 25.0
-                }
-            }
-        },
-        {
-            "Cables & Adaptors - Electronics, PC and Wireless": {
-                "referralPercentage": {
-                    "300": 22.0,
-                    "500": 17.0,
-                    "maxPercentage": 20.0
-                }
-            }
-        },
-        {
-            "Car Cradles, Lens Kits & Tablet Cases": {
-                "referralPercentage": {
-                    "500": 19.0,
-                    "1000": 25.0,
-                    "maxPercentage": 27.0
-                }
-            }
-        },
-        {
-            "Warranty Services": {
-                "referralPercentage": {
-                    "maxPercentage": 30.0
-                }
+    },
+    {
+        "Software products": {
+            "referralPercentage": {
+                "maxPercentage": 9.5
             }
         }
-    ,
-   
-        {
-            "Office Products - Arts and Crafts": {
-                "referralPercentage": {
-                    "500": 10.0,
-                    "1000": 11.0,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Office Products - Office Supplies": {
-                "referralPercentage": {
-                    "500": 10.0,
-                    "1000": 11.0,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Office Products - Writing Instruments": {
-                "referralPercentage": {
-                    "300": 10.0,
-                    "1000": 11.0,
-                    "maxPercentage": 12.5
-                }
-            }
-        },
-        {
-            "Office - Electronic Devices": {
-                "referralPercentage": {
-                    "1000": 9.5,
-                    "maxPercentage": 10.5
-                }
-            }
-        },
-        {
-            "Office - Other products": {
-                "referralPercentage": {
-                    "500": 10.0,
-                    "1000": 10.5,
-                    "maxPercentage": 11.5
-                }
-            }
-        },
-        {
-            "Projectors, Home Theatre Systems, Binoculars and Telescopes": {
-                "referralPercentage": {
-                    "maxPercentage": 6.0
-                }
+    },
+    {
+        "Music": {
+            "referralPercentage": {
+                "maxPercentage": 6.5
             }
         }
-    ,
-    
-        {
-            "Musical Instruments - Guitars": {
-                "referralPercentage": {
-                    "maxPercentage": 10.0
-                }
-            }
-        },
-        {
-            "Musical Instruments - Keyboards": {
-                "referralPercentage": {
-                    "maxPercentage": 8.0
-                }
-            }
-        },
-        {
-            "Musical Instruments - Microphones": {
-                "referralPercentage": {
-                    "maxPercentage": 9.5
-                }
-            }
-        },
-        {
-            "Musical Instruments - DJ & VJ Equipment, Recording and Computer, Cables & Leads and PA & Stage": {
-                "referralPercentage": {
-                    "maxPercentage": 10.5
-                }
-            }
-        },
-        {
-            "Musical Instruments - Other products": {
-                "referralPercentage": {
-                    "maxPercentage": 10.5
-                }
+    },
+    {
+        "Video Games - Consoles": {
+            "referralPercentage": {
+                "1000": 7.0,
+                "maxPercentage": 9.0
             }
         }
-    
-    ];
-
+    },
+    {
+        "Video Games - Accessories": {
+            "referralPercentage": {
+                "500": 10.5,
+                "maxPercentage": 13.5
+            }
+        }
+    },
+    {
+        "Video Games - Online Game Services": {
+            "referralPercentage": {
+                "500": 2.0,
+                "maxPercentage": 3.5
+            }
+        }
+    },
+    {
+        "Video Games - Other products": {
+            "referralPercentage": {
+                "500": 9.0,
+                "1000": 10.0,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Toys - Drones": {
+            "referralPercentage": {
+                "300": 7.5,
+                "500": 16.0,
+                "1000": 11.5,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Toys - Balloons and Soft Toys": {
+            "referralPercentage": {
+                "maxPercentage": 11.0
+            }
+        }
+    },
+    {
+        "Toys - Other products": {
+            "referralPercentage": {
+                "300": 9.0,
+                "1000": 9.5,
+                "maxPercentage": 11.5
+            }
+        }
+    },
+    {
+        "Pet Foods": {
+            "referralPercentage": {
+                "300": 5.5,
+                "1000": 11.5,
+                "maxPercentage": 12.5
+            }
+        }
+    },
+    {
+        "Pet - Other products": {
+            "referralPercentage": {
+                "300": 2.0,
+                "500": 10.0,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Beauty - Haircare, Bath and Shower": {
+            "referralPercentage": {
+                "300": 7.5,
+                "500": 5.0,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Beauty - Make-up": {
+            "referralPercentage": {
+                "300": 6.0,
+                "500": 4.5,
+                "1000": 7.5,
+                "maxPercentage": 7.0
+            }
+        }
+    },
+    {
+        "Deodorants": {
+            "referralPercentage": {
+                "300": 8.5,
+                "1000": 6.5,
+                "maxPercentage": 7.0
+            }
+        }
+    },
+    {
+        "Facial Steamers": {
+            "referralPercentage": {
+                "300": 7.0,
+                "500": 6.5,
+                "maxPercentage": 7.0
+            }
+        }
+    },
+    {
+        "Beauty - Fragrance": {
+            "referralPercentage": {
+                "300": 13.5,
+                "500": 12.5,
+                "maxPercentage": 14.0
+            }
+        }
+    },
+    {
+        "Face Wash": {
+            "referralPercentage": {
+                "300": 6.0,
+                "500": 5.0,
+                "1000": 9.0,
+                "maxPercentage": 9.5
+            }
+        }
+    },
+    {
+        "Moisturizer Cream": {
+            "referralPercentage": {
+                "500": 6.5,
+                "1000": 9.0,
+                "maxPercentage": 9.5
+            }
+        }
+    },
+    {
+        "Sunscreen": {
+            "referralPercentage": {
+                "300": 5.5,
+                "500": 6.0,
+                "1000": 9.0,
+                "maxPercentage": 9.5
+            }
+        }
+    },
+    {
+        "Beauty - Other products": {
+            "referralPercentage": {
+                "300": 6.5,
+                "500": 7.0,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Luxury Beauty": {
+            "referralPercentage": {
+                "300": 5.0,
+                "500": 6.0,
+                "1000": 9.0,
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "Health and Household - Medical Equipment, Sexual Wellness, Adult Incontinence, Elderly Care": {
+            "referralPercentage": {
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Health and Household - Sports Nutrition and Meal Replacement Shakes": {
+            "referralPercentage": {
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Health and Household - Ayurvedic, Homeopathic and Alternate Medicine products": {
+            "referralPercentage": {
+                "500": 6.0,
+                "1000": 7.0,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Health and Household - Household Cleaning, Laundry, Air Fresheners, Personal Hygiene (Hand Wash, Feminine Hygiene and Oral Care)": {
+            "referralPercentage": {
+                "500": 4.5,
+                "1000": 7.5,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Health and Household - Vitamins & Mineral Health Supplements": {
+            "referralPercentage": {
+                "500": 9.0,
+                "maxPercentage": 10.5
+            }
+        }
+    },
+    {
+        "Health and Household - Other products": {
+            "referralPercentage": {
+                "300": 9.5,
+                "maxPercentage": 11.5
+            }
+        }
+    },
+    {
+        "Baby Hardlines - Swings, Bouncers and Rockers, Carriers, Walkers, Baby Safety - Guards and Locks, Baby Room Décor, Baby Furniture, Baby Car Seats and Accessories": {
+            "referralPercentage": {
+                "300": 6.0,
+                "500": 8.5,
+                "1000": 6.0,
+                "maxPercentage": 7.5
+            }
+        }
+    },
+    {
+        "Baby Strollers": {
+            "referralPercentage": {
+                "300": 4.0,
+                "1000": 6.0,
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "Baby - Diapers": {
+            "referralPercentage": {
+                "300": 5.0,
+                "500": 5.5,
+                "maxPercentage": 9.5
+            }
+        }
+    },
+    {
+        "Baby - Other products": {
+            "referralPercentage": {
+                "300": 3.5,
+                "500": 6.5,
+                "1000": 9.0,
+                "maxPercentage": 7.0
+            }
+        }
+    },
+    {
+        "Grocery - Herbs and Spices": {
+            "referralPercentage": {
+                "300": 4.0,
+                "1000": 5.5,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Grocery - Dried Fruits and Nuts": {
+            "referralPercentage": {
+                "500": 6.0,
+                "1000": 8.0,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Grocery - Hampers and gifting": {
+            "referralPercentage": {
+                "1000": 9.0,
+                "maxPercentage": 11.5
+            }
+        }
+    },
+    {
+        "Grocery and Gourmet - Oils": {
+            "referralPercentage": {
+                "1000": 7.5,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Grocery and Gourmet - Other products": {
+            "referralPercentage": {
+                "1000": 7.0,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "OTC Medicine": {
+            "referralPercentage": {
+                "500": 12.0,
+                "maxPercentage": 15.0
+            }
+        }
+    },
+    {
+        "Pharmacy - Prescription Medicines": {
+            "referralPercentage": {
+                "maxPercentage": 6.0
+            }
+        }
+    },
+    {
+        "Personal Care Appliances - Weighing Scales and Fat Analysers": {
+            "referralPercentage": {
+                "300": 11.0,
+                "500": 10.5,
+                "maxPercentage": 13.5
+            }
+        }
+    },
+    {
+        "Personal Care Appliances - Grooming and Styling": {
+            "referralPercentage": {
+                "500": 11.0,
+                "1000": 10.0,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Personal Care Appliances - Electric Massagers": {
+            "referralPercentage": {
+                "500": 9.5,
+                "1000": 13.5,
+                "maxPercentage": 14.5
+            }
+        }
+    },
+    {
+        "Personal Care Appliances - Glucometer and Glucometer Strips": {
+            "referralPercentage": {
+                "maxPercentage": 5.5
+            }
+        }
+    },
+    {
+        "Personal Care Appliances - Thermometers": {
+            "referralPercentage": {
+                "500": 12.5,
+                "maxPercentage": 10.5
+            }
+        }
+    },
+    {
+        "Personal Care Appliances - Other products": {
+            "referralPercentage": {
+                "300": 7.5,
+                "500": 10.5,
+                "1000": 11.0,
+                "maxPercentage": 7.5
+            }
+        }
+    },
+    {
+        "Apparel - Women’s Innerwear and Lingerie": {
+            "referralPercentage": {
+                "500": 12.0,
+                "1000": 18.0,
+                "maxPercentage": 15.0
+            }
+        }
+    },
+    {
+        "Apparel - Sarees & Dress Materials": {
+            "referralPercentage": {
+                "300": 10.0,
+                "500": 8.0,
+                "1000": 12.0,
+                "maxPercentage": 23.0
+            }
+        }
+    },
+    {
+        "Apparel - Sweat Shirts and Jackets": {
+            "referralPercentage": {
+                "500": 8.0,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Apparel Other Innerwear": {
+            "referralPercentage": {
+                "300": 12.0,
+                "500": 11.0,
+                "1000": 16.5,
+                "maxPercentage": 18.5
+            }
+        }
+    },
+    {
+        "Sleepwear": {
+            "referralPercentage": {
+                "500": 10.0,
+                "1000": 16.0,
+                "maxPercentage": 19.0
+            }
+        }
+    },
+    {
+        "Apparel - Accessories": {
+            "referralPercentage": {
+                "500": 13.0,
+                "maxPercentage": 19.0
+            }
+        }
+    },
+    {
+        "Apparel - Men's T-Shirts (except Tank Tops and Full Sleeve Tops)": {
+            "referralPercentage": {
+                "300": 2.0,
+                "500": 5.0,
+                "maxPercentage": 21.0
+            }
+        }
+    },
+    {
+        "Apparel - Ethnic Wear": {
+            "referralPercentage": {
+                "300": 6.5,
+                "500": 4.0,
+                "1000": 8.0,
+                "maxPercentage": 17.5
+            }
+        }
+    },
+    {
+        "Apparel - Baby": {
+            "referralPercentage": {
+                "300": 6.0,
+                "500": 7.5,
+                "1000": 14.0,
+                "maxPercentage": 20.0
+            }
+        }
+    },
+    {
+        "Apparel - Shorts": {
+            "referralPercentage": {
+                "300": 16.5,
+                "500": 13.5,
+                "1000": 23.5,
+                "maxPercentage": 24.0
+            }
+        }
+    },
+    {
+        "Apparel - Other products": {
+            "referralPercentage": {
+                "300": 6.0,
+                "500": 6.5,
+                "1000": 15.0,
+                "maxPercentage": 19.0
+            }
+        }
+    },
+    {
+        "Eyewear - Sunglasses, Frames and Zero Power Eye Glasses": {
+            "referralPercentage": {
+                "500": 14.0,
+                "1000": 14.5,
+                "maxPercentage": 18.5
+            }
+        }
+    },
+    {
+        "Watches": {
+            "referralPercentage": {
+                "maxPercentage": 14.0
+            }
+        }
+    },
+    {
+        "Flip Flops": {
+            "referralPercentage": {
+                "500": 13.0,
+                "1000": 12.5,
+                "maxPercentage": 15.0
+            }
+        }
+    },
+    {
+        "Kids Shoes": {
+            "referralPercentage": {
+                "300": 10.0,
+                "1000": 14.0,
+                "maxPercentage": 16.0
+            }
+        }
+    },
+    {
+        "Shoes": {
+            "referralPercentage": {
+                "300": 15.0,
+                "1000": 14.5,
+                "maxPercentage": 16.5
+            }
+        }
+    },
+    {
+        "Wallets": {
+            "referralPercentage": {
+                "500": 10.0,
+                "1000": 12.5,
+                "maxPercentage": 14.0
+            }
+        }
+    },
+    {
+        "Backpacks": {
+            "referralPercentage": {
+                "300": 12.0,
+                "500": 10.0,
+                "1000": 12.0,
+                "maxPercentage": 14.5
+            }
+        }
+    },
+    {
+        "Handbags": {
+            "referralPercentage": {
+                "300": 2.0,
+                "500": 10.0,
+                "1000": 11.0,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Luggage - Suitcase & Trolleys": {
+            "referralPercentage": {
+                "500": 7.5,
+                "1000": 6.5,
+                "maxPercentage": 5.5
+            }
+        }
+    },
+    {
+        "Luggage - Travel Accessories": {
+            "referralPercentage": {
+                "300": 10.0,
+                "500": 9.0,
+                "1000": 10.0,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Luggage - Other products": {
+            "referralPercentage": {
+                "300": 6.0,
+                "500": 9.0,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Silver Jewellery": {
+            "referralPercentage": {
+                "1000": 10.5,
+                "maxPercentage": 13.0
+            }
+        }
+    },
+    {
+        "Silver coins and Bars": {
+            "referralPercentage": {
+                "maxPercentage": 3.0
+            }
+        }
+    },
+    {
+        "Fine Jewellery - Unstudded and Solitaire": {
+            "referralPercentage": {
+                "maxPercentage": 5.0
+            }
+        }
+    },
+    {
+        "Fine Jewellery - Studded": {
+            "referralPercentage": {
+                "maxPercentage": 13.0
+            }
+        }
+    },
+    {
+        "Fine Jewellery - Gold Coins": {
+            "referralPercentage": {
+                "maxPercentage": 5.0
+            }
+        }
+    },
+    {
+        "Fashion Jewellery": {
+            "referralPercentage": {
+                "500": 17.5,
+                "maxPercentage": 22.5
+            }
+        }
+    },
+    {
+        "Kitchen Tools & Supplies - Choppers, Knives, Bakeware & Accessories": {
+            "referralPercentage": {
+                "300": 2.0,
+                "500": 5.0,
+                "maxPercentage": 12.5
+            }
+        }
+    },
+    {
+        "Cookware, Tableware and Dinnerware": {
+            "referralPercentage": {
+                "500": 5.0,
+                "1000": 9.0,
+                "maxPercentage": 12.5
+            }
+        }
+    },
+    {
+        "Kitchen - Glassware and Ceramicware": {
+            "referralPercentage": {
+                "500": 4.0,
+                "1000": 11.0,
+                "maxPercentage": 12.5
+            }
+        }
+    },
+    {
+        "Gas Stoves and Pressure Cookers": {
+            "referralPercentage": {
+                "1500": 6.0,
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "Small Appliances": {
+            "referralPercentage": {
+                "5000": 6.5,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Fans and Robotic Vacuums": {
+            "referralPercentage": {
+                "3000": 6.5,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Water Purifier and Accessories": {
+            "referralPercentage": {
+                "5000": 6.5,
+                "maxPercentage": 7.5
+            }
+        }
+    },
+    {
+        "Water Heaters and Accessories": {
+            "referralPercentage": {
+                "5000": 8.0,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Inverter and Batteries": {
+            "referralPercentage": {
+                "maxPercentage": 4.5
+            }
+        }
+    },
+    {
+        "Cleaning and Home Appliances": {
+            "referralPercentage": {
+                "5000": 7.5,
+                "maxPercentage": 8.5
+            }
+        }
+    },
+    {
+        "Containers, Boxes, Bottles and Kitchen Storage": {
+            "referralPercentage": {
+                "300": 2.0,
+                "500": 5.0,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Slipcovers and Kitchen Linens": {
+            "referralPercentage": {
+                "300": 7.5,
+                "500": 11.5,
+                "maxPercentage": 15.5
+            }
+        }
+    },
+    {
+        "Kitchen - Other products": {
+            "referralPercentage": {
+                "500": 5.0,
+                "1000": 11.5,
+                "maxPercentage": 12.5
+            }
+        }
+    },
+    {
+        "Wall Art": {
+            "referralPercentage": {
+                "300": 5.0,
+                "500": 11.0,
+                "maxPercentage": 13.5
+            }
+        }
+    },
+    {
+        "Home Fragrance and Candles": {
+            "referralPercentage": {
+                "300": 2.0,
+                "500": 7.5,
+                "maxPercentage": 12.5
+            }
+        }
+    },
+    {
+        "Home Furnishing (Excluding Curtain and Curtain Accessories)": {
+            "referralPercentage": {
+                "300": 2.0,
+                "1000": 7.0,
+                "maxPercentage": 11.0
+            }
+        }
+    },
+    {
+        "Bedsheets, Blankets and Covers": {
+            "referralPercentage": {
+                "500": 3.0,
+                "1000": 7.0,
+                "maxPercentage": 8.5
+            }
+        }
+    },
+    {
+        "Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage)": {
+            "referralPercentage": {
+                "300": 5.5,
+                "1000": 11.0,
+                "maxPercentage": 15.0
+            }
+        }
+    },
+    {
+        "Home - Waste and Recycling": {
+            "referralPercentage": {
+                "300": 7.5,
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Craft Materials": {
+            "referralPercentage": {
+                "500": 2.0,
+                "maxPercentage": 5.0
+            }
+        }
+    },
+    {
+        "Home Decor Products": {
+            "referralPercentage": {
+                "300": 6.0,
+                "1000": 12.0,
+                "maxPercentage": 17.0
+            }
+        }
+    },
+    {
+        "Clocks": {
+            "referralPercentage": {
+                "300": 4.0,
+                "1000": 9.0,
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "LED Bulbs and Battens": {
+            "referralPercentage": {
+                "300": 2.0,
+                "500": 6.5,
+                "maxPercentage": 14.0
+            }
+        }
+    },
+    {
+        "Indoor Lighting - Wall, Ceiling Fixture Lights, Lamp Bases, Lamp Shades and Smart Lighting": {
+            "referralPercentage": {
+                "500": 6.0,
+                "1000": 14.5,
+                "maxPercentage": 11.5
+            }
+        }
+    },
+    {
+        "Indoor Lighting - Other products": {
+            "referralPercentage": {
+                "300": 4.5,
+                "500": 8.5,
+                "1000": 11.5,
+                "maxPercentage": 16.0
+            }
+        }
+    },
+    {
+        "Cushion Covers": {
+            "referralPercentage": {
+                "300": 3.0,
+                "500": 7.0,
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "Curtains and Curtain Accessories": {
+            "referralPercentage": {
+                "300": 15.5,
+                "500": 16.5,
+                "1000": 11.5,
+                "maxPercentage": 16.5
+            }
+        }
+    },
+    {
+        "Rugs and Doormats": {
+            "referralPercentage": {
+                "300": 4.0,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Doors and Windows (Wooden, Metal, PVC / UPVC Doors & Windows)": {
+            "referralPercentage": {
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "Sanitaryware - Toilets, Bathtubs, Basins / Sinks, Bath Mirrors & Vanities, and Shower Enclosures / Partitions": {
+            "referralPercentage": {
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "Tiles & Flooring Accessories": {
+            "referralPercentage": {
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Wires (Electrical Wires / Cables for House Wiring, ad hoc usage)": {
+            "referralPercentage": {
+                "maxPercentage": 10.0
+            }
+        }
+    },
+    {
+        "Home - Other products": {
+            "referralPercentage": {
+                "500": 10.0,
+                "1000": 13.0,
+                "maxPercentage": 18.0
+            }
+        }
+    },
+    {
+        "Home Improvement - Wallpapers & Wallpaper Accessories": {
+            "referralPercentage": {
+                "500": 9.0,
+                "1000": 8.0,
+                "maxPercentage": 6.5
+            }
+        }
+    },
+    {
+        "Wall Paints and Tools": {
+            "referralPercentage": {
+                "300": 9.0,
+                "maxPercentage": 6.0
+            }
+        }
+    },
+    {
+        "Home Improvement Accessories": {
+            "referralPercentage": {
+                "maxPercentage": 13.5
+            }
+        }
+    },
+    {
+        "Safes and Lockers with Locking Mechanism": {
+            "referralPercentage": {
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Home improvement - Kitchen & Bath (Fittings, accessories), Cleaning Supplies, Electricals, Hardware, Building Materials": {
+            "referralPercentage": {
+                "300": 5.0,
+                "500": 10.0,
+                "maxPercentage": 12.0
+            }
+        }
+    },
+    {
+        "Ladders": {
+            "referralPercentage": {
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Home Safety & Security Systems": {
+            "referralPercentage": {
+                "maxPercentage": 6.0
+            }
+        }
+    },
+    {
+        "Home Improvement - Other products": {
+            "referralPercentage": {
+                "maxPercentage": 13.5
+            }
+        }
+    },
+    {
+        "Lawn & Garden - Commercial Agricultural Products": {
+            "referralPercentage": {
+                "maxPercentage": 3.0
+            }
+        }
+    },
+    {
+        "Lawn & Garden - Solar Panels": {
+            "referralPercentage": {
+                "maxPercentage": 6.0
+            }
+        }
+    },
+    {
+        "Lawn & Garden - Leaf Blower and Water Pump": {
+            "referralPercentage": {
+                "maxPercentage": 6.5
+            }
+        }
+    },
+    {
+        "Lawn & Garden - Solar Devices, Inverters, Charge Controller, Battery, Lights, Solar Gadgets": {
+            "referralPercentage": {
+                "maxPercentage": 8.0
+            }
+        }
+    },
+    {
+        "Lawn & Garden - Chemical Pest Control, Mosquito Nets, Bird Control, Plant Protection, Foggers": {
+            "referralPercentage": {
+                "1000": 7.0,
+                "maxPercentage": 9.0
+            }
+        }
+    },
+    {
+        "Lawn & Garden - Outdoor equipments, Saws, Lawn Mowers, Cultivator, Tiller, String Trimmers, Generators, Barbeque Grills, Greenhouses": {
+            "referralPercentage": {
+                "maxPercentage": 6.5
+            }
+        }
+    },
+    {
+        "Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools": {
+            "referralPercentage": {
+                "500": 9.5,
+                "maxPercentage": 11.0
+            }
+        }
+    },
+    {
+        "Lawn and Garden - Other products": {
+            "referralPercentage": {
+                "300": 9.0,
+                "15000": 10.0,
+                "maxPercentage": 5.0
+            }
+        }
+    }
+];
 
 
 // Assume referralFeesByCategory is already defined
