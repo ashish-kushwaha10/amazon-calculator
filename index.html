@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1 class="text-center">Amazone calculator</h1>
+    <h1 class="text-center">Amazone Calculator</h1>
     <br><br>
     <div class="container">
         <div class="row justify-content-center">
@@ -24,7 +24,7 @@
                 <h5>Select Category
                     <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
+                            title="Choose the product category for which you want to calculate profit"></i>
                     </span>
                 </h5>
                 <div class="dropdown-container">
@@ -41,13 +41,13 @@
                 <h5>3) Product Prices
                     <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
+                            title="Enter the product prices to determine profit calculations"></i>
                     </span>
                 </h5>
                 <p> Selling Price
                     <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
+                            title="The price at which you plan to sell the product on Amazon"></i>
                     </span>
                     <input type="number" name="" id="selling-price">
                     </input>
@@ -55,7 +55,7 @@
                 </p>
                 <p>Excluded shipping charges <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
+                            title="Indicate whether shipping charges are excluded in your price"></i>
                     </span>
                     <span> Yes <label for="YES"><input name="shippingExcluded" id="isShippingExcluded"
                                 onclick="showInputBlock('excluded-shipping')" type="radio"> No
@@ -71,11 +71,11 @@
 
                     <p>Product cost price <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                                title="Tooltip on top"></i>
+                                title="The cost of the product including any manufacturing or wholesale costs"></i>
                         </span><label for=""><input type="number" name="" id="cost-price"></label></p>
                     <p>Product GST <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                                title="Tooltip on top"></i>
+                                title="GST percentage applicable on the product"></i>
                         </span><label for=""><input type="number" name="" id="gst"></label></p>
 
                 </div>
@@ -86,7 +86,7 @@
                     <h5>4) Shipping Charge Calculation
                         <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                                title="Tooltip on top"></i>
+                                title="Calculate shipping charges based on the product's weight or dimensions"></i>
                         </span>
                     </h5>
                     <!-- <h6>
@@ -96,7 +96,7 @@
                     </h6> -->
                     <p>weight <input id="weight" type="number" placeholder="gram"></p>
                     <span>Want to enter the product dimention instead <i class="bi bi-info-circle-fill tooltip-font"
-                            data-toggle="tooltip" data-placement="right" title="Tooltip on top"></i> </span>
+                            data-toggle="tooltip" data-placement="right" title="Choose to enter the product's dimensions to calculate volumetric weight"></i> </span>
                     <span> Yes <label for="YES"><input name="volumetricWeight" id="vol-weight-id"
                                 onclick="showInputBlock('volumetric-weight')" type="radio"> No
                         </label>
@@ -114,12 +114,12 @@
                     <h5>5) Extra Charge Calculation
                         <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                                title="Tooltip on top"></i>
+                                title="Input additional charges or discounts that apply to the product"></i>
                         </span>
                     </h5>
                     <p>Discount on product <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                                title="Tooltip on top"></i>
+                                title="Enter any discounts offered on the product price"></i>
                         </span>
 
                         <span> Yes <label for="YES"><input onclick="showInputBlock('discount-input')"
@@ -141,7 +141,7 @@
                     <div class="mt-4">
                         <p>Return Rate on product <span>
                                 <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip"
-                                    data-placement="right" title="Tooltip on top"></i>
+                                    data-placement="right" title="Specify the return rate for the product to factor into profit calculations"></i>
                             </span>
 
                             <span> Yes <label for="YES"><input onclick="showInputBlock('return-input')"
@@ -171,7 +171,7 @@
             <div class="col-lg-5">
                 <h3>Profit <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
+                            title="Displays the profit calculated for local, regional, and national shipping zones"></i>
                     </span></h3>
                 <table>
                     <tr>
@@ -230,7 +230,7 @@
                 <br><br>
                 <h3>Bank settlement Amount <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Tooltip on top"></i>
+                            title="Shows the final amount that will be settled in your bank after fees and charges"></i>
                     </span></h3>
                 <table>
                     <tr>

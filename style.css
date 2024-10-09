@@ -169,9 +169,10 @@ input[type="number"] {
   .calculate-btn {
     margin-top: 20px;
     padding: 10px 25px;
-    border: 2px solid black;
+    border: 2px solid rgb(151, 218, 166);
     background-color: #ff9900;
     border-radius: 15px;
+    font-weight: bold;
     color: white;
   }
   
