@@ -1244,7 +1244,7 @@ function calculateResult() {
         // productVolume = (height * width * length);
         volumetricWeight = (height * width * length) / 5
         if(volumetricWeight){
-            document.getElementById('vol-weight-display').innerHTML = /*"vol weight " +*/ volumetricWeight;
+            document.getElementById('vol-weight-display').innerHTML = /*"vol weight " +*/ "@" + volumetricWeight +"g";
             document.getElementById('vol-weight-display').style.color = 'red'
         }
         // actual Weight in kg
