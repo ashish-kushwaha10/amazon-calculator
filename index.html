@@ -20,8 +20,10 @@
     <br><br>
     <div class="container">
         <div class="row justify-content-center">
+           
             <div class="col-lg-5">
-                <h5>Select Category
+                <img src="images/amazon-logo2.jpg" class="amazon-logo" alt="">
+                <h5 class="mt-3">Select Category
                     <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Choose the product category for which you want to calculate profit"></i>
@@ -61,7 +63,7 @@
                                 onclick="showInputBlock('excluded-shipping')" type="radio"> No
                         </label>
                         <label for="NO"> <input name="shippingExcluded" onclick="hideInputBlock('excluded-shipping')"
-                                type="radio"></label>
+                                type="radio" checked></label>
                     </span>
                 </p>
                 <p id="excluded-shipping">Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">
@@ -101,7 +103,7 @@
                                 onclick="showInputBlock('volumetric-weight')" type="radio"> No
                         </label>
                         <label for="NO"> <input name="volumetricWeight" onclick="hideInputBlock('volumetric-weight')"
-                                type="radio"></label>
+                                type="radio" checked></label>
                     </span>
                     <p id="volumetric-weight">hight <input id="height" type="number" placeholder="cm"> Width <input
                             id="width" type="number" placeholder="cm">
@@ -126,12 +128,12 @@
                                     name="DiscountORDeals" type="radio"> No
                             </label>
                             <label for="NO"> <input onclick="hideInputBlock('discount-input')" name="DiscountORDeals"
-                                    type="radio"></label>
+                                    type="radio" checked></label>
                         </span>
                     </p>
                     <div id="discount-input">
                         <label for="amount">Amount <input type="radio" name="AmountOrPercent"
-                                id="DiscountOnAmount"></label>
+                                id="DiscountOnAmount" checked></label>
                         <label for="percent">Percent <input type="radio" name="AmountOrPercent"
                                 id="DiscountOnPercent"></label>
 
@@ -148,12 +150,12 @@
                                         name="ReturnRate" type="radio"> No
                                 </label>
                                 <label for="NO"> <input onclick="hideInputBlock('return-input')" name="ReturnRate"
-                                        type="radio"></label>
+                                        type="radio" checked></label>
                             </span>
                         </p>
                         <div id="return-input">
                             <label for="amount">Amount <input type="radio" name="AmountOrPercent_R"
-                                    id="returnOnAmount"></label>
+                                    id="returnOnAmount" checked></label>
                             <label for="percent">Percent <input type="radio" name="AmountOrPercent_R"
                                     id="returnOnPercentage"></label>
 
@@ -168,7 +170,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 profit-section">
                 <h3>Profit <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Displays the profit calculated for local, regional, and national shipping zones"></i>

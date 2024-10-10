@@ -101,7 +101,7 @@ input::placeholder {
 }
 
 input[type="number"] {
-    width: 100px;
+    width: 90px;
     padding: 6px;
     margin-top: 5px;
     border: 1px solid #ced4da;
@@ -274,7 +274,7 @@ input[type="number"] {
  
 
   #referal-fee, #closing-fee {
-    width: 100px;
+    width: 90px;
     padding: 6px;
     margin-top: 5px;
     border: 1px solid #ced4da;
@@ -283,4 +283,90 @@ input[type="number"] {
     font-size: 1rem;
     color: #495057;
     background-color: #fff;
+}
+
+.amazon-logo {
+width: 230px;
+height: 80px;
+display: block;
+margin: auto;
+}
+
+@media (max-width: 768px) {
+  .amazon-logo {
+    width: 200px;
+    height: 70px;
+    display: block;
+    margin: auto;
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Specific styles for the Profit section */
+.profit-section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0056b3; /* Dark blue for heading */
+  margin-bottom: 15px;
+}
+
+.profit-section table {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.profit-section th, .profit-section td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.profit-section th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+.profit {
+  font-size: 20px;
+  font-weight: bold;
+  color: green; /* Profit in green */
+}
+
+.shiping-charge, .ACS-charge, .per-charge, .total-charge, .bank-settlement {
+  font-size: 18px;
+  color: green; /* Orange color for charges */
+}
+
+button#referal-fee, button#closing-fee {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+#referal-percentage {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 16px;
 }
