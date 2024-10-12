@@ -338,7 +338,21 @@ margin: auto;
     padding: 5px;
 } */
 
+.profit-section h3 {
+ 
+  position: relative;
+  display: inline-block; /* Ensures the underline fits the width of the text */
+}
 
+.profit-section h3::after {
+  content: ''; /* Adds an empty content for the underline */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust the position below the text */
+  width: 100%; /* Make the underline span the full width of the text */
+  height: 2px; /* Thickness of the underline */
+  background-color: rgb(69, 69, 235); /* Matches the color of your h3 text */
+}
 
 .profit-css {
   display: flex;
