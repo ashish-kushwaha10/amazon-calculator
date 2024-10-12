@@ -20,7 +20,7 @@ body {
   
   /* Apply a background color to the body */
   body {
-    background-color: #f9f9f9;
+    background-color: #ebedf0;
   }
   
   /* Center the main container */
@@ -101,7 +101,9 @@ input::placeholder {
 }
 
 input[type="number"] {
-    width: 90px;
+    width: 100%;
+    float: right;
+    overflow: auto;
     padding: 6px;
     margin-top: 5px;
     border: 1px solid #ced4da;
@@ -131,7 +133,8 @@ input[type="number"] {
     max-width: 300px;
 }
 .dropdown-container input {
-    width: 100%;
+    width: 88%;
+    margin-left: 50px;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -315,7 +318,9 @@ margin: auto;
 
 
 
-
+.profit-background {
+  background-color: #ebedf0;
+}
 
 /* Specific styles for the Profit section */
 .profit-section h3 {
@@ -370,3 +375,14 @@ button#referal-fee, button#closing-fee {
   font-weight: bold;
   font-size: 16px;
 }
+
+
+
+
+
+/* Input field styling */
+/* .form-group input {
+    float: right;
+    width: 35%;
+    padding: 5px;
+} */

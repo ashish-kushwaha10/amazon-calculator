@@ -11,7 +11,55 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+        .inline-form {
+            display: flex;
+            /* Flexbox layout */
+            align-items: center;
+            /* Aligns the <p> and <input> vertically in the center */
+            gap: 10px;
+            /* Adds space between the <p> and <input> */
+        }
 
+        .inline-form p {
+            margin: 0;
+            /* Removes any default margin from the <p> tag */
+        }
+
+        .inline-form input {
+            flex-shrink: 0;
+            /* Prevents the input from shrinking */
+            padding: 5px;
+            /* Optional padding for the input */
+            width: 200px;
+            /* Set a fixed width for the input */
+        }
+
+        p.inline-text {
+            display: inline;
+            /* Set the <p> tag to behave like an inline element */
+            margin-right: 10px;
+            /* Adds some space between the <p> and the <span> */
+        }
+
+        .inline-radio {
+            display: inline;
+            /* Ensure <span> stays inline */
+            vertical-align: middle;
+            /* Align radios with the text */
+            float: right;
+            /* Move the span with radio buttons to the right */
+            margin-left: 10px;
+        }
+
+        .inline-radio label {
+            margin-right: 15px;
+            /* Add space between Yes and No radio buttons */
+        }
+
+        .inline-radio input[type="radio"] {
+            vertical-align: middle;
+            /* Align radio buttons with text */
+        }
     </style>
 </head>
 
@@ -20,67 +68,86 @@
     <br><br>
     <div class="container">
         <div class="row justify-content-center">
-           
-            <div class="col-lg-5">
+
+            <div class="col-lg-5 text-black">
                 <img src="images/amazon-logo2.jpg" class="amazon-logo" alt="">
-                <h5 class="mt-3">Select Category
+                <span class="mt-3" style="font-size: 1.2rem;"><b>1) Select Category</b>
                     <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Choose the product category for which you want to calculate profit"></i>
                     </span>
-                </h5>
-                <div class="dropdown-container">
+                </span>
+                <span class="dropdown-container">
                     <input type="text" placeholder="🔎️ Search Category... ▼" aria-label="Search" id="categorySearch"
                         onkeyup="filterFunction()">
                     <div id="categoryDropdown" class="dropdown-content">
                         <!-- Dropdown options will be populated here -->
                     </div>
-                </div>
+                </span>
 
 
 
                 <br><br>
-                <h5>3) Product Prices
+                <h5>2) Product Prices
                     <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Enter the product prices to determine profit calculations"></i>
                     </span>
                 </h5>
-                <p> Selling Price
-                    <span>
-                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="The price at which you plan to sell the product on Amazon"></i>
-                    </span>
+                <div class="inline-form">
+                    <p>Selling Price
+                        <span>
+                            <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                                title="The price at which you plan to sell the product on Amazon"></i>
+                        </span>
+                    </p>
                     <input type="number" name="" id="selling-price">
                     </input>
+                </div>
 
-                </p>
-                <p>Excluded shipping charges <span>
-                        <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
-                            title="Indicate whether shipping charges are excluded in your price"></i>
-                    </span>
-                    <span> Yes <label for="YES"><input name="shippingExcluded" id="isShippingExcluded"
-                                onclick="showInputBlock('excluded-shipping')" type="radio"> No
+                <div class="my-4">
+                    <p class="mt-2 inline-text">Excluded shipping charges
+                        <span>
+                            <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                                title="Indicate whether shipping charges are excluded in your price"></i>
+                        </span>
+                    </p>
+
+                    <span class="inline-radio">
+                        Yes <label for="YES">
+                            <input name="shippingExcluded" id="isShippingExcluded"
+                                onclick="showInputBlock('excluded-shipping')" type="radio">
+
                         </label>
-                        <label for="NO"> <input name="shippingExcluded" onclick="hideInputBlock('excluded-shipping')"
-                                type="radio" checked></label>
+                        No <label for="NO">
+                            <input name="shippingExcluded" onclick="hideInputBlock('excluded-shipping')" type="radio"
+                                checked>
+                        </label>
                     </span>
-                </p>
+                </div>
+
                 <p id="excluded-shipping">Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">
                     Regional <input id="excluded-regional-shipping" type="number" placeholder="&#8377;">
                     National <input id="excluded-national-shipping" type="number" placeholder="&#8377;"></p>
-                <div>
 
+                <div class="inline-form">
                     <p>Product cost price <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="The cost of the product including any manufacturing or wholesale costs"></i>
-                        </span><label for=""><input type="number" name="" id="cost-price"></label></p>
-                    <p>Product GST <span>
+                        </span></p>
+                    <input type="number" name="" id="cost-price">
+                </div>
+                <div class="inline-form">
+
+                    <p class="mt-4">Product GST <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="GST percentage applicable on the product"></i>
-                        </span><label for=""><input type="number" name="" id="gst"></label></p>
+                        </span></p>
+                    <input class="mt-4" type="number" name="" id="gst">
 
                 </div>
+
+
 
 
                 <div id="shipping-charge-div">
@@ -97,12 +164,14 @@
                         Ship by self <input type="radio" name="ship">
                     </h6> -->
                     <p>weight <input id="weight" type="number" placeholder="gram"></p>
-                    <span>Want to enter the product dimention instead <i class="bi bi-info-circle-fill tooltip-font"
-                            data-toggle="tooltip" data-placement="right" title="Choose to enter the product's dimensions to calculate volumetric weight"></i> </span>
-                    <span> Yes <label for="YES"><input name="volumetricWeight" id="vol-weight-id"
-                                onclick="showInputBlock('volumetric-weight')" type="radio"> No
+
+                    <p class="inline-text">Want to enter the product dimention instead <i
+                            class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
+                            title="Choose to enter the product's dimensions to calculate volumetric weight"></i> </p>
+                    <span class="inline-radio"> Yes <label for="YES"><input name="volumetricWeight" id="vol-weight-id"
+                                onclick="showInputBlock('volumetric-weight')" type="radio"> 
                         </label>
-                        <label for="NO"> <input name="volumetricWeight" onclick="hideInputBlock('volumetric-weight')"
+                       No <label for="NO"> <input name="volumetricWeight" onclick="hideInputBlock('volumetric-weight')"
                                 type="radio" checked></label>
                     </span>
                     <p id="volumetric-weight">hight <input id="height" type="number" placeholder="cm"> Width <input
@@ -119,21 +188,22 @@
                                 title="Input additional charges or discounts that apply to the product"></i>
                         </span>
                     </h5>
-                    <p>Discount on product <span>
+                    <p class="inline-text">Discount on product <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="Enter any discounts offered on the product price"></i>
                         </span>
+                    </p>
 
-                        <span> Yes <label for="YES"><input onclick="showInputBlock('discount-input')"
-                                    name="DiscountORDeals" type="radio"> No
+                        <span class="inline-radio"> Yes <label for="YES"><input onclick="showInputBlock('discount-input')"
+                                    name="DiscountORDeals" type="radio"> 
                             </label>
-                            <label for="NO"> <input onclick="hideInputBlock('discount-input')" name="DiscountORDeals"
+                            No <label for="NO"> <input onclick="hideInputBlock('discount-input')" name="DiscountORDeals"
                                     type="radio" checked></label>
                         </span>
-                    </p>
+                    
                     <div id="discount-input">
-                        <label for="amount">Amount <input type="radio" name="AmountOrPercent"
-                                id="DiscountOnAmount" checked></label>
+                        <label for="amount">Amount <input type="radio" name="AmountOrPercent" id="DiscountOnAmount"
+                                checked></label>
                         <label for="percent">Percent <input type="radio" name="AmountOrPercent"
                                 id="DiscountOnPercent"></label>
 
@@ -141,21 +211,22 @@
                     </div>
                     <!-- return rate -->
                     <div class="mt-4">
-                        <p>Return Rate on product <span>
+                        <p class="inline-text">Return Rate on product <span>
                                 <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip"
-                                    data-placement="right" title="Specify the return rate for the product to factor into profit calculations"></i>
-                            </span>
+                                    data-placement="right"
+                                    title="Specify the return rate for the product to factor into profit calculations"></i>
+                            </span></p>
 
-                            <span> Yes <label for="YES"><input onclick="showInputBlock('return-input')"
-                                        name="ReturnRate" type="radio"> No
+                            <span class="inline-radio"> Yes <label for="YES"><input onclick="showInputBlock('return-input')"
+                                        name="ReturnRate" type="radio"> 
                                 </label>
-                                <label for="NO"> <input onclick="hideInputBlock('return-input')" name="ReturnRate"
+                                No <label for="NO"> <input onclick="hideInputBlock('return-input')" name="ReturnRate"
                                         type="radio" checked></label>
                             </span>
-                        </p>
+                        
                         <div id="return-input">
-                            <label for="amount">Amount <input type="radio" name="AmountOrPercent_R"
-                                    id="returnOnAmount" checked></label>
+                            <label for="amount">Amount <input type="radio" name="AmountOrPercent_R" id="returnOnAmount"
+                                    checked></label>
                             <label for="percent">Percent <input type="radio" name="AmountOrPercent_R"
                                     id="returnOnPercentage"></label>
 
@@ -170,7 +241,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-5 profit-section">
+            <div class="col-lg-5 profit-section profit-background">
                 <h3>Profit <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Displays the profit calculated for local, regional, and national shipping zones"></i>
