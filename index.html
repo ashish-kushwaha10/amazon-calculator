@@ -94,7 +94,7 @@
                             title="Enter the product prices to determine profit calculations"></i>
                     </span>
                 </h5>
-                <div class="inline-form">
+                <div class="inline-form set-input">
                     <p>Selling Price
                         <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
@@ -105,7 +105,7 @@
                     </input>
                 </div>
 
-                <div class="my-4">
+                <div class="my-4 set-input">
                     <p class="mt-2 inline-text">Excluded shipping charges
                         <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
@@ -126,18 +126,18 @@
                     </span>
                 </div>
 
-                <p id="excluded-shipping">Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">
+                <p id="excluded-shipping" class="other-input">Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">
                     Regional <input id="excluded-regional-shipping" type="number" placeholder="&#8377;">
                     National <input id="excluded-national-shipping" type="number" placeholder="&#8377;"></p>
 
-                <div class="inline-form">
+                <div class="inline-form set-input">
                     <p>Product cost price <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="The cost of the product including any manufacturing or wholesale costs"></i>
                         </span></p>
                     <input type="number" name="" id="cost-price">
                 </div>
-                <div class="inline-form">
+                <div class="inline-form set-input">
 
                     <p class="mt-4">Product GST <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
@@ -163,7 +163,7 @@
 
                         Ship by self <input type="radio" name="ship">
                     </h6> -->
-                    <p>weight <input id="weight" type="number" placeholder="gram"></p>
+                    <p class="set-input">weight <input id="weight" type="number" placeholder="gram"></p>
 
                     <p class="inline-text">Want to enter the product dimention instead <i
                             class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
@@ -174,7 +174,7 @@
                        No <label for="NO"> <input name="volumetricWeight" onclick="hideInputBlock('volumetric-weight')"
                                 type="radio" checked></label>
                     </span>
-                    <p id="volumetric-weight">hight <input id="height" type="number" placeholder="cm"> Width <input
+                    <p id="volumetric-weight" class="other-input">hight <input id="height" type="number" placeholder="cm"> Width <input
                             id="width" type="number" placeholder="cm">
                         Length <input id="length" type="number" placeholder="cm"> <b><span
                                 id="vol-weight-display"></span></b>
@@ -201,7 +201,7 @@
                                     type="radio" checked></label>
                         </span>
                     
-                    <div id="discount-input">
+                    <div class="other-input" id="discount-input">
                         <label for="amount">Amount <input type="radio" name="AmountOrPercent" id="DiscountOnAmount"
                                 checked></label>
                         <label for="percent">Percent <input type="radio" name="AmountOrPercent"
@@ -224,7 +224,7 @@
                                         type="radio" checked></label>
                             </span>
                         
-                        <div id="return-input">
+                        <div class="other-input" id="return-input">
                             <label for="amount">Amount <input type="radio" name="AmountOrPercent_R" id="returnOnAmount"
                                     checked></label>
                             <label for="percent">Percent <input type="radio" name="AmountOrPercent_R"
@@ -242,11 +242,11 @@
 
             </div>
             <div class="col-lg-5 profit-section profit-background">
-                <h3>Profit <span>
+                <h3 style="color: rgb(69, 69, 235);">Profit You'll Make<span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Displays the profit calculated for local, regional, and national shipping zones"></i>
                     </span></h3>
-                <table>
+                <!-- <table>
                     <tr>
                         <th>Local</th>
                         <th>Regional</th>
@@ -257,7 +257,13 @@
                         <td class="profit">&#8377;</td>
                         <td class="profit">&#8377;</td>
                     </tr>
-                </table>
+                </table> -->
+
+                <div>
+                    <p class="profit-css">Local <span>₹ <button class="profit"></button></span></p>
+                    <p class="profit-css">Regional <span>₹ <button class="profit"></button></span></p>
+                    <p class="profit-css">National <span>₹ <button class="profit"></button></span></p>
+                </div>
                 <br>
                 <p>A-Amazon Referral fee <button id="referal-fee">
                         &#8377;</button>
@@ -301,7 +307,7 @@
                     </table>
                 </div>
                 <br><br>
-                <h3>Bank settlement Amount <span>
+                <h3 style="color: rgb(69, 69, 235);" >Bank settlement Amount <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Shows the final amount that will be settled in your bank after fees and charges"></i>
                     </span></h3>

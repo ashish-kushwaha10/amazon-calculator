@@ -22,7 +22,9 @@ body {
   body {
     background-color: #ebedf0;
   }
-  
+  .profit-background{
+    background-color: #ebedf0 !important;
+  }
   /* Center the main container */
   /* .container {
     margin: 0 auto;
@@ -65,6 +67,7 @@ body {
   /* Style the radio buttons */
   input[type="radio"] {
     margin-right: 5px;
+    accent-color: green;
   }
   
   /* Style the info tooltip icon */
@@ -100,7 +103,7 @@ input::placeholder {
     /* for Chrome, Firefox, Opera */
 }
 
-input[type="number"] {
+.set-input input[type="number"] {
     width: 100%;
     float: right;
     overflow: auto;
@@ -112,6 +115,20 @@ input[type="number"] {
     font-size: 1rem;
     color: #495057;
     background-color: #fff;
+}
+
+.other-input input[type="number"] {
+  /* width: 100%; */
+  overflow: auto;
+  padding: 6px;
+  margin-top: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+  height: 34px;
 }
 
 input[type="number"]:focus {
@@ -314,75 +331,37 @@ margin: auto;
 
 
 
-
-
-
-
-.profit-background {
-  background-color: #ebedf0;
-}
-
-/* Specific styles for the Profit section */
-.profit-section h3 {
-  font-size: 24px;
-  font-weight: bold;
-  color: #0056b3; /* Dark blue for heading */
-  margin-bottom: 15px;
-}
-
-.profit-section table {
-  width: 100%;
-  font-family: Arial, sans-serif;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.profit-section th, .profit-section td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-.profit-section th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-  color: #333;
-}
-
-.profit {
-  font-size: 20px;
-  font-weight: bold;
-  color: green; /* Profit in green */
-}
-
-.shiping-charge, .ACS-charge, .per-charge, .total-charge, .bank-settlement {
-  font-size: 18px;
-  color: green; /* Orange color for charges */
-}
-
-button#referal-fee, button#closing-fee {
-  background-color: #e0e0e0;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-}
-
-#referal-percentage {
-  color: #ff0000;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-
-
-
-
 /* Input field styling */
 /* .form-group input {
     float: right;
     width: 35%;
     padding: 5px;
 } */
+
+
+
+.profit-css {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aligns elements with space between them */
+  margin-bottom: 10px; /* Adds space between rows */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 35px;
+}
+
+.profit-css span {
+  color: green; /* Green color for the ₹ symbol */
+  margin-right: 5px; /* A small margin to create space between ₹ and the button */
+  font-size: 1.3rem;}
+
+  .profit-css span button {
+    margin-left: 5px; /* Adds space between the ₹ symbol and the button */
+    width: 150px; /* Set the width for the buttons */
+    height: 40px; /* Set the height for the buttons */
+    border: 1px solid #000; /* Adds a border */
+    border-radius: 3px; /* Optional: Rounds the button's corners */
+    vertical-align: middle; /* Align button and ₹ symbol vertically */
+  background-color: white;
+  }
+
