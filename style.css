@@ -25,6 +25,12 @@ body {
   .profit-background{
     background-color: #ebedf0 !important;
   }
+
+  input::placeholder {
+    color: green; /* Set your desired color here */
+    opacity: 1;  /* Ensure the opacity is set, as some browsers may reduce it */
+    font-weight: bold;
+  }
   /* Center the main container */
   /* .container {
     margin: 0 auto;
@@ -323,7 +329,29 @@ margin: auto;
 }
 
 
+.input-symbol-set{
+  position: relative; 
+  left: 7rem; 
+  color: green; 
+  font-size: 20px; 
+  font-weight: bold;
+}
 
+.input-symbol-set-for-cost{
+  position: relative; 
+  left: 8rem; 
+  color: green; 
+  font-size: 20px; 
+  font-weight: bold;
+}
+/* .input-symbol-set-for-gst{
+  position: relative; 
+  left: 10rem; 
+  color: green; 
+  font-size: 20px; 
+  font-weight: bold;
+  vertical-align: middle;
+} */
 
 
 

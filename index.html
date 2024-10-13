@@ -95,13 +95,13 @@
                     </span>
                 </h5>
                 <div class="inline-form set-input">
-                    <p>Selling Price
+                    <p>Product Selling Price
                         <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="The price at which you plan to sell the product on Amazon"></i>
                         </span>
                     </p>
-                    <input type="number" name="" id="selling-price">
+                    <span class="input-symbol-set">₹</span><input type="number" name="" id="selling-price">
                     </input>
                 </div>
 
@@ -131,11 +131,12 @@
                     National <input id="excluded-national-shipping" type="number" placeholder="&#8377;"></p>
 
                 <div class="inline-form set-input">
-                    <p>Product cost price <span>
+                    <p>Product Cost Price <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="The cost of the product including any manufacturing or wholesale costs"></i>
                         </span></p>
-                    <input type="number" name="" id="cost-price">
+                        <span class="input-symbol-set-for-cost">₹</span> 
+                        <input type="number" name="" id="cost-price">
                 </div>
                 <div class="inline-form set-input">
 
@@ -143,7 +144,8 @@
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="GST percentage applicable on the product"></i>
                         </span></p>
-                    <input class="mt-4" type="number" name="" id="gst">
+                        <!-- <span class="input-symbol-set-for-gst">%</span> -->
+                    <input class="mt-4" type="number" placeholder="% " name="" id="gst">
 
                 </div>
 
@@ -152,7 +154,7 @@
 
                 <div id="shipping-charge-div">
                     <br>
-                    <h5>4) Shipping Charge Calculation
+                    <h5>3) Shipping Charge Calculation
                         <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="Calculate shipping charges based on the product's weight or dimensions"></i>
@@ -182,7 +184,7 @@
                 </div>
                 <br>
                 <div>
-                    <h5>5) Extra Charge Calculation
+                    <h5>4) Extra Charge Calculation
                         <span>
                             <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                 title="Input additional charges or discounts that apply to the product"></i>
@@ -307,7 +309,7 @@
                     </table>
                 </div>
                 <br><br>
-                <h3 style="color: rgb(69, 69, 235);" >Bank settlement Amount <span>
+                <h3 style="color: rgb(69, 69, 235); margin-bottom: 20px;" >Bank settlement Amount <span>
                         <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                             title="Shows the final amount that will be settled in your bank after fees and charges"></i>
                     </span></h3>
