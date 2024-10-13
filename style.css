@@ -148,6 +148,18 @@ input[type="number"] {
     margin-left: auto;
 }
 
+/* @media (min-width: 1199px){
+
+  .p-text-set{
+    margin-left: 15px !important;
+  }
+}  */
+
+.set-text-color-blue{
+  color: blue;
+  font-weight: bold;
+}
+
 /* dropdown CSS */
 .dropdown-container {
     position: relative;
