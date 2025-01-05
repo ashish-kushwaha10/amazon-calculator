@@ -52,7 +52,7 @@ body {
   }
   
   /* Style the main sections */
-  .col-lg-5 {
+  .main-setting{
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -107,6 +107,20 @@ input[type='number'] {
 input::placeholder {
     text-align: right;
     /* for Chrome, Firefox, Opera */
+}
+
+.new-set-input input[type="number"] {
+  width: 90%;
+  float: right;
+  overflow: auto;
+  padding: 6px;
+  /* margin-top: 5px; */
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
 }
 
 .set-input input[type="number"] {
@@ -352,6 +366,13 @@ margin: auto;
 .input-symbol-set-for-cost{
   position: relative; 
   left: 8rem; 
+  color: green; 
+  font-size: 20px; 
+  font-weight: bold;
+}
+.new-input-symbol-set-for-cost{
+  /* position: relative; 
+  left: 8rem;  */
   color: green; 
   font-size: 20px; 
   font-weight: bold;
