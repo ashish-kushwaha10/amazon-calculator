@@ -256,9 +256,6 @@ input[type="number"] {
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
-  body {
-    padding: 10px; /* Add some padding for better readability */
-  }
 
   h1 {
     font-size: 28px;
@@ -396,7 +393,11 @@ input[type="number"] {
   font-size: 20px;
   font-weight: bold;
 }
-
+@media (max-width: 768px) {
+.input-width-set{
+  width: 250px;
+}
+}
 .excluded-padding-set {
   padding-left: 3.2rem;
 }

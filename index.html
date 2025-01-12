@@ -97,8 +97,8 @@
                 
 
                 <div class="row justify-content-evenly align-items-center">
-                    <div class="col-lg-5 d-flex align-items-center">
-                        <p class="mb-0">Product Selling Price
+                    <div class="col-5 col-lg-5 d-flex align-items-center">
+                        <p class="mb-0">Selling Price
                             <span>
                                 <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip"
                                     data-placement="right"
@@ -106,14 +106,14 @@
                             </span>
                         </p>
                     </div>
-                    <div class="col-lg-5 d-flex align-items-center justify-content-end">
+                    <div class="col-5 col-lg-5 d-flex align-items-center justify-content-end">
                         <span class="new-input-symbol-set-for-cost me-2">₹</span>
-                        <input type="number" name="" id="selling-price" class="form-control" style="width: 250px;">
+                        <input type="number" name="" id="selling-price" class="form-control input-width-set">
                     </div>
                 </div>
                 
                 <div class="row justify-content-evenly align-items-center mt-3">
-                    <div class="col-lg-6 d-flex align-items-center">
+                    <div class="col-6 col-lg-6 d-flex align-items-center">
                         <p class="mb-0">Excluded shipping charges
                             <span>
                                 <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip"
@@ -122,7 +122,7 @@
                             </span>
                         </p>
                     </div>
-                    <div class="col-lg-4 d-flex align-items-center justify-content-end">
+                    <div class="col-4 col-lg-4 d-flex align-items-center justify-content-end">
                         <span class="inline-radio">
                             Yes <label for="YES">
                                 <input name="shippingExcluded" id="isShippingExcluded"
@@ -145,28 +145,28 @@
                     </div>
                 </div>
                 <div class="row justify-content-evenly align-items-center mt-4">
-                    <div class="col-lg-5 d-flex align-items-center">
-                        <p class="mb-0">Product Cost Price <span>
+                    <div class="col-5 col-lg-5 d-flex align-items-center">
+                        <p class="mb-0">Cost Price <span>
                                 <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip"
                                     data-placement="right"
                                     title="The cost of the product including any manufacturing or wholesale costs"></i>
                             </span></p>
                     </div>
-                    <div class="col-lg-5 d-flex align-items-center justify-content-end">
+                    <div class="col-5 col-lg-5 d-flex align-items-center justify-content-end">
                         <span class="new-input-symbol-set-for-cost me-2">₹</span>
-                        <input type="number" name="" id="cost-price" class="form-control" style="width: 250px;">
+                        <input type="number" name="" id="cost-price" class="form-control input-width-set">
                     </div>
                 </div>
                 
                 <div class="row justify-content-evenly align-items-center mt-3">
-                    <div class="col-lg-5 d-flex align-items-center">
+                    <div class="col-5 col-lg-5 d-flex align-items-center">
                         <p class="mb-0">Product GST <span>
                                 <i class="bi bi-info-circle-fill tooltip-font" data-toggle="tooltip" data-placement="right"
                                     title="GST percentage applicable on the product"></i>
                             </span></p>
                     </div>
-                    <div class="col-lg-5 d-flex align-items-center justify-content-end">
-                        <input class="form-control" type="number" placeholder="%" name="" id="gst" style="width: 250px;">
+                    <div class="col-5 col-lg-5 d-flex align-items-center justify-content-end">
+                        <input class="form-control input-width-set" type="number" placeholder="%" name="" id="gst">
                     </div>
                 </div>
                 
@@ -187,19 +187,19 @@
                     </h5>
                 
                     <div class="row justify-content-evenly align-items-center mt-3">
-                        <div class="col-lg-5 d-flex align-items-center">
+                        <div class="col-5 col-lg-5 d-flex align-items-center">
                             <p class="mb-0">Product Weight</p>
                         </div>
-                        <div class="col-lg-5 d-flex align-items-center justify-content-end">
-                            <input id="weight" type="number" class="form-control" placeholder="gram" style="width: 250px;">
+                        <div class="col-5 col-lg-5 d-flex align-items-center justify-content-end">
+                            <input id="weight" type="number" class="form-control" placeholder="gram">
                         </div>
                     </div>
                 
                     <div class="row justify-content-evenly align-items-center mt-3">
-                        <div class="col-lg-5 d-flex align-items-center">
-                            <p class="mb-0">Want to enter the product dimension instead</p>
+                        <div class="col-5 col-lg-5 d-flex align-items-center">
+                            <p class="mb-0">Calculate weight based on dimensions</p>
                         </div>
-                        <div class="col-lg-5 d-flex align-items-center justify-content-end">
+                        <div class="col-6 col-lg-5 d-flex align-items-center justify-content-end">
                             <span class="inline-radio">
                                 Yes <label for="YES">
                                     <input name="volumetricWeight" id="vol-weight-id" onclick="showInputBlock('volumetric-weight')" type="radio">
@@ -234,10 +234,10 @@
                 
                     <!-- Discount on product -->
                     <div class="row justify-content-evenly align-items-center mt-3">
-                        <div class="col-lg-5 d-flex align-items-center">
+                        <div class="col-5 col-lg-5 d-flex align-items-center">
                             <p class="mb-0">Discount on product</p>
                         </div>
-                        <div class="col-lg-5 d-flex align-items-center justify-content-end">
+                        <div class="col-6 col-lg-5 d-flex align-items-center justify-content-end">
                             <span class="inline-radio">
                                 Yes <label for="YES">
                                     <input onclick="showInputBlock('discount-input')" name="DiscountORDeals" type="radio">
@@ -264,10 +264,10 @@
                     <!-- Return Rate on Product -->
                     <div class="mt-4">
                         <div class="row justify-content-evenly align-items-center">
-                            <div class="col-lg-5 d-flex align-items-center">
+                            <div class="col-5 col-lg-5 d-flex align-items-center">
                                 <p class="mb-0">Return Rate on product</p>
                             </div>
-                            <div class="col-lg-5 d-flex align-items-center justify-content-end">
+                            <div class="col-6 col-lg-5 d-flex align-items-center justify-content-end">
                                 <span class="inline-radio">
                                     Yes <label for="YES">
                                         <input onclick="showInputBlock('return-input')" name="ReturnRate" type="radio">
