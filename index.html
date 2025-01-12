@@ -78,7 +78,7 @@
                     </span>
                 </span>
                 <span class="dropdown-container">
-                    <input type="text" placeholder="🔎️ Search Category... ▼" aria-label="Search" id="categorySearch"
+                    <input type="text" placeholder=" 🔎️ Search By Category..... ▼" aria-label="Search" id="categorySearch"
                         onkeyup="filterFunction()">
                     <div id="categoryDropdown" class="dropdown-content">
                         <!-- Dropdown options will be populated here -->
@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <div id="excluded-shipping" class="row justify-content-center align-items-center mt-2">
-                    <div class="col-11">
+                    <div class="excluded-padding-set col-11">
                         <p  class="other-input">
                             Local <input id="excluded-local-shipping" type="number" placeholder="&#8377;">
                             Regional <input id="excluded-regional-shipping" type="number" placeholder="&#8377;">
@@ -217,6 +217,7 @@
                             <input id="height" type="number" class="form-control me-2" placeholder="Height (cm)" style="max-width: 100px;">
                             <input id="width" type="number" class="form-control me-2" placeholder="Width (cm)" style="max-width: 100px;">
                             <input id="length" type="number" class="form-control" placeholder="Length (cm)" style="max-width: 100px;">
+                            <span id="vol-weight-display"></span>
                         </div>
                     </div>
                 </div>
@@ -312,12 +313,27 @@
                     <p class="profit-css">National <span>₹ <button class="profit"></button></span></p>
                 </div>
                 <br>
-                <p><span class="set-text-color-blue">A</span>-Amazon Referral fee <button id="referal-fee">
-                        &#8377;</button>
-                    <b><span id="referal-percentage"></span></b>
-                </p>
-                <p><span class="set-text-color-blue">C</span>-Amazon Closing fee <button id="closing-fee">
-                        &#8377;</button></p>
+                <div class="container table-style mb-4 mt-2">
+                    <div class="row">
+                        <div class="col-10">
+                            <span class="set-text-color-blue">A</span>-Amazon Referral Fees
+                            <b>(<span style="color: red;" id="referal-percentage"> %</span>)</b>
+                        </div>
+                        <div class="col-2 text-middle">
+                            <button id="referal-fee">&#8377;</button>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <span class="set-text-color-blue">C</span>-Closing Fees (0-250)
+                        </div>
+                        <div class="col-2 text-middle">
+                            <button id="closing-fee">&#8377;</button>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="table-responsive">
                     <table>
                         <tr>

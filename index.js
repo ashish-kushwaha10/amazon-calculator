@@ -1208,13 +1208,13 @@ function calculateResult() {
 
     }
 
-    document.getElementById('referal-percentage').innerHTML = "@ "+referalFeePercentageValue +"%";
+    document.getElementById('referal-percentage').innerHTML =`${referalFeePercentageValue}%`;
     document.getElementById('referal-percentage').style.color = "red";
 
     // getting actual referal in the output
     let amazonReferalValue = Number(sellingPrice * (referalFeePercentageValue / 100));
     amazonReferalValue = Math.round(amazonReferalValue * 100) / 100
-    referalFee.innerHTML = amazonReferalValue;
+    referalFee.innerHTML = `₹${amazonReferalValue}`;
 
       // condition for closing fee
       switch (true) {
@@ -1232,7 +1232,7 @@ function calculateResult() {
             break;
     }
     // showing output in webPage with id="closing-fee"
-    closingFeeId.innerHTML = closingFee;
+    closingFeeId.innerHTML = `₹${closingFee}`;
 
 
     // Shipping charge Calculation
@@ -1244,7 +1244,7 @@ function calculateResult() {
         // productVolume = (height * width * length);
         volumetricWeight = (height * width * length) / 5
         if(volumetricWeight){
-            document.getElementById('vol-weight-display').innerHTML = /*"vol weight " +*/ "@" + volumetricWeight +"g";
+            document.getElementById('vol-weight-display').innerHTML = /*"vol weight " +*/ " @" + volumetricWeight +"g";
             document.getElementById('vol-weight-display').style.color = 'red'
         }
         // actual Weight in kg

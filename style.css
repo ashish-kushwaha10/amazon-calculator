@@ -1,113 +1,100 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Apply a background color to the body */
-  body {
-    background-color: #ebedf0;
-  }
-  .profit-background{
-    background-color: #ebedf0 !important;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  input::placeholder {
-    color: green; /* Set your desired color here */
-    opacity: 1;  /* Ensure the opacity is set, as some browsers may reduce it */
-    font-weight: bold;
-  }
-  /* Center the main container */
-  /* .container {
-    margin: 0 auto;
-    padding: 30px 0;
-    max-width: 900px;
-  } */
-  
-  /* Style the header */
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  h3 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Style the main sections */
-  .main-setting{
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  /* Style the select dropdowns */
-  select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #fff;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  /* Style the radio buttons */
-  input[type="radio"] {
-    margin-right: 5px;
-    accent-color: green;
-  }
-  
-  /* Style the info tooltip icon */
-  .bi-info-circle-fill {
-    color: #88898a;
-    font-size: 14px;
-  }
-  
-  /* Style the table */
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+/* Apply a background color to the body */
+body {
+  background-color: #ebedf0;
+}
+.profit-background {
+  background-color: #ebedf0 !important;
+}
+
+
+
+/* Style the header */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style the main sections */
+.main-setting {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Style the select dropdowns */
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+  margin-right: 5px;
+  accent-color: green;
+}
+
+/* Style the info tooltip icon */
+.bi-info-circle-fill {
+  color: #88898a;
+  font-size: 14px;
+}
+
+/* Style the table */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 td,
 th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }
 
-input[type='number'] {
-    width: 5rem;
+input[type="number"] {
+  width: 5rem;
 }
-
 input::placeholder {
-    text-align: right;
-    /* for Chrome, Firefox, Opera */
+  /* color: green;  */
+  opacity: 1; 
+  font-weight: bold;
+  text-align: right;
 }
+.dropdown-container input[type="number"] {
+  width: 5rem;
+}
+.dropdown-container input::placeholder {
+  /* color: green;  */
+  opacity: 1; 
+  font-weight: bold;
+  text-align: left;
+}
+
+
 
 .new-set-input input[type="number"] {
   width: 90%;
@@ -124,17 +111,17 @@ input::placeholder {
 }
 
 .set-input input[type="number"] {
-    width: 100%;
-    float: right;
-    overflow: auto;
-    padding: 6px;
-    margin-top: 5px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    color: #495057;
-    background-color: #fff;
+  width: 100%;
+  float: right;
+  overflow: auto;
+  padding: 6px;
+  margin-top: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
 }
 
 .other-input input[type="number"] {
@@ -152,14 +139,14 @@ input::placeholder {
 }
 
 input[type="number"]:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
 }
 
 input[type="number"] {
-    max-width: 200px;
-    margin-left: auto;
+  max-width: 200px;
+  margin-left: auto;
 }
 
 /* @media (min-width: 1199px){
@@ -169,179 +156,218 @@ input[type="number"] {
   }
 }  */
 
-.set-text-color-blue{
+.set-text-color-blue {
   color: blue;
   font-weight: bold;
 }
 
 /* dropdown CSS */
 .dropdown-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    max-width: 300px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
 }
 .dropdown-container input {
-    width: 88%;
-    margin-left: 50px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 88%;
+  margin-left: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 100%;
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    border-top: none;
-    z-index: 1;
-    border-radius: 0 0 4px 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .dropdown-content div {
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #eaeaea;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eaeaea;
 }
 .dropdown-content div:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 .dropdown-content div:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 .show {
-    display: block;
+  display: block;
 }
 
-  /* Style the calculate button */
-  .calculate-btn {
-    margin-top: 20px;
-    padding: 10px 25px;
-    border: 2px solid rgb(151, 218, 166);
-    background-color: #ff9900;
-    border-radius: 15px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  /* Media Query for smaller screens */
-  @media (max-width: 768px) {
-    .col-lg-5 {
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Tooltip style */
-  .tooltip-font {
-    font-size: 15px;
-    cursor: pointer;
-  }
-  
-  .tooltip {
-    position: relative;
-  }
-  
-  .tooltip-text {
-    visibility: hidden;
-    width: 180px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -90px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
+/* Style the calculate button */
+.calculate-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: 2px solid rgb(151, 218, 166);
+  background-color: #ff9900;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+}
 
-  /* Media Query for smaller screens */
+/* Media Query for smaller screens */
 @media (max-width: 768px) {
-    body {
-      padding: 10px; /* Add some padding for better readability */
-    }
-  
-    h1 {
-      font-size: 28px;
-    }
-  
-    h3 {
-      font-size: 20px;
-    }
-  
-    /* Adjust column layout */
-    .row {
-      flex-direction: column;
-    }
-  
-    .col-lg-5 {
-      margin-bottom: 20px;
-    }
-  
-    /* Center align text in tables */
-    th,
-    td {
-      text-align: center;
-    }
-  
-    /* Adjust input fields width */
-    input[type='number'] {
-      width: 100%;
-    }
-  
-    /* Adjust buttons width */
-    button {
-      width: 100%;
-    }
-  
-    /* Style the tooltip text for mobile */
-    .tooltip-text {
-      bottom: 125%;
-      left: 0;
-      margin: 0;
-      width: 100%;
-      text-align: center;
-    }
+  .col-lg-5 {
+    margin-bottom: 20px;
   }
-
-  #discount-input, #return-input, #excluded-shipping, #volumetric-weight{
-    display: none;
-  }
-  
-  #shipping-charge-div{
-    display: block;
-  }
- 
-
-  #referal-fee, #closing-fee {
-    width: 90px;
-    padding: 6px;
-    margin-top: 5px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    color: #495057;
-    background-color: #fff;
 }
+
+/* Tooltip style */
+.tooltip-font {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 180px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -90px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Add some padding for better readability */
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Adjust column layout */
+  .row {
+    flex-direction: column;
+  }
+
+  .col-lg-5 {
+    margin-bottom: 20px;
+  }
+
+  /* Center align text in tables */
+  th,
+  td {
+    text-align: center;
+  }
+
+  /* Adjust input fields width */
+  input[type="number"] {
+    width: 100%;
+  }
+
+  /* Adjust buttons width */
+  button {
+    width: 100%;
+  }
+
+  /* Style the tooltip text for mobile */
+  .tooltip-text {
+    bottom: 125%;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#discount-input,
+#return-input,
+#excluded-shipping,
+#volumetric-weight {
+  display: none;
+}
+
+#shipping-charge-div {
+  display: block;
+}
+
+/* #referal-fee,
+#closing-fee {
+  width: 90px;
+  padding: 6px;
+  margin-top: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #495057;
+  background-color: #fff;
+} */
+/* Style for the table-like layout */
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-style .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0;
+}
+
+.table-style .col-10 {
+  flex: 10;
+  font-weight: bold;
+}
+
+.table-style .col-2 {
+  flex: 2;
+}
+
+.table-style button {
+  border: none;
+  background: none;
+  color: red;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.table-style span {
+  color: blue;
+  font-weight: bold;
+}
+
 
 .amazon-logo {
-width: 230px;
-height: 80px;
-display: block;
-margin: auto;
+  width: 230px;
+  height: 80px;
+  display: block;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -350,63 +376,48 @@ margin: auto;
     height: 70px;
     display: block;
     margin: auto;
-    }
-  
+  }
 }
 
-
-.input-symbol-set{
-  position: relative; 
-  left: 7rem; 
-  color: green; 
-  font-size: 20px; 
+.input-symbol-set {
+  position: relative;
+  left: 7rem;
+  color: green;
+  font-size: 20px;
   font-weight: bold;
 }
 
-.input-symbol-set-for-cost{
-  position: relative; 
-  left: 8rem; 
-  color: green; 
-  font-size: 20px; 
+.input-symbol-set-for-cost {
+  position: relative;
+  left: 8rem;
+  color: green;
+  font-size: 20px;
   font-weight: bold;
 }
-.new-input-symbol-set-for-cost{
+.new-input-symbol-set-for-cost {
   /* position: relative; 
   left: 8rem;  */
-  color: green; 
-  font-size: 20px; 
+  color: green;
+  font-size: 20px;
   font-weight: bold;
 }
-/* .input-symbol-set-for-gst{
-  position: relative; 
-  left: 10rem; 
-  color: green; 
-  font-size: 20px; 
-  font-weight: bold;
-  vertical-align: middle;
-} */
 
-
-
-
-
-
-
-/* Input field styling */
-/* .form-group input {
-    float: right;
-    width: 35%;
-    padding: 5px;
-} */
+.excluded-padding-set {
+  padding-left: 3.2rem;
+}
+@media (max-width: 768px) {
+  .excluded-padding-set {
+    padding-left: 0;
+  }
+}
 
 .profit-section h3 {
- 
   position: relative;
   display: inline-block; /* Ensures the underline fits the width of the text */
 }
 
 .profit-section h3::after {
-  content: ''; /* Adds an empty content for the underline */
+  content: ""; /* Adds an empty content for the underline */
   position: absolute;
   left: 0;
   bottom: -5px; /* Adjust the position below the text */
@@ -428,15 +439,16 @@ margin: auto;
 .profit-css span {
   color: green; /* Green color for the ₹ symbol */
   margin-right: 5px; /* A small margin to create space between ₹ and the button */
-  font-size: 1.3rem;}
+  font-size: 1.3rem;
+}
 
-  .profit-css span button {
-    margin-left: 5px; /* Adds space between the ₹ symbol and the button */
-    width: 150px; /* Set the width for the buttons */
-    height: 40px; /* Set the height for the buttons */
-    border: 1px solid #000; /* Adds a border */
-    border-radius: 3px; /* Optional: Rounds the button's corners */
-    vertical-align: middle; /* Align button and ₹ symbol vertically */
+.profit-css span button {
+  margin-left: 5px; /* Adds space between the ₹ symbol and the button */
+  width: 150px; /* Set the width for the buttons */
+  height: 40px; /* Set the height for the buttons */
+  border: 1px solid #000; /* Adds a border */
+  border-radius: 3px; /* Optional: Rounds the button's corners */
+  vertical-align: middle; /* Align button and ₹ symbol vertically */
   background-color: white;
-  }
+}
 
