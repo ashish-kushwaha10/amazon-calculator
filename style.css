@@ -268,11 +268,6 @@ input[type="number"] {
     font-size: 20px;
   }
 
-  /* Adjust column layout */
-  .row {
-    flex-direction: column;
-  }
-
   .col-lg-5 {
     margin-bottom: 20px;
   }
