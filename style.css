@@ -11,8 +11,6 @@ body {
   background-color: #ebedf0 !important;
 }
 
-
-
 /* Style the header */
 h1 {
   font-size: 36px;
@@ -32,6 +30,11 @@ h3 {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+}
+@media (max-width: 1199px) {
+  .main-setting {
+    padding: 10px;
+  }
 }
 
 /* Style the select dropdowns */
@@ -80,7 +83,7 @@ input[type="number"] {
 }
 input::placeholder {
   /* color: green;  */
-  opacity: 1; 
+  opacity: 1;
   font-weight: bold;
   text-align: right;
 }
@@ -89,12 +92,10 @@ input::placeholder {
 }
 .dropdown-container input::placeholder {
   /* color: green;  */
-  opacity: 1; 
+  opacity: 1;
   font-weight: bold;
   text-align: left;
 }
-
-
 
 .new-set-input input[type="number"] {
   width: 90%;
@@ -176,6 +177,17 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+@media (max-width: 1199px) {
+  .dropdown-container input {
+    width: 88%;
+    margin-top: 8px;
+    margin-left: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -256,7 +268,6 @@ input[type="number"] {
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
-
   h1 {
     font-size: 28px;
   }
@@ -277,7 +288,7 @@ input[type="number"] {
 
   /* Adjust input fields width */
   input[type="number"] {
-    width: 100%;
+    width: 55%;
   }
 
   /* Adjust buttons width */
@@ -354,7 +365,6 @@ input[type="number"] {
   font-weight: bold;
 }
 
-
 .amazon-logo {
   width: 230px;
   height: 80px;
@@ -393,10 +403,21 @@ input[type="number"] {
   font-size: 20px;
   font-weight: bold;
 }
-@media (max-width: 768px) {
-.input-width-set{
-  width: 250px;
+.input-set-for-gm-per {
+  /* position: relative; 
+  left: 8rem;  */
+  color: green;
+  font-size: 17px;
+  font-weight: bold;
 }
+
+.input-width-set {
+  width: 250px !important;
+}
+@media (max-width: 768px) {
+  .input-width-set {
+    width: 100% !important;
+  }
 }
 .excluded-padding-set {
   padding-left: 3.2rem;
@@ -447,4 +468,3 @@ input[type="number"] {
   vertical-align: middle; /* Align button and ₹ symbol vertically */
   background-color: white;
 }
-
