@@ -1252,9 +1252,9 @@ function calculateResult() {
         let shipingWeight = volumetricWeight > weight ? volumetricWeight : weight;
 
         let shipping = {
-            local: 41,
-            regional: 55,
-            national: 76
+            local: 65,
+            regional: 65,
+            national: 65
         };
 
         switch (true) {
@@ -1274,9 +1274,9 @@ function calculateResult() {
 
             case shipingWeight > 500 && shipingWeight <= 1000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13;
-                regionalCharge = shipping.regional + 17;
-                nationalCharge = shipping.national + 25;
+                localCharge = 85; //shipping.local + 13;
+                regionalCharge = 85; //shipping.regional + 17;
+                nationalCharge = 85; //shipping.national + 25;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1285,9 +1285,9 @@ function calculateResult() {
 
             case shipingWeight > 1000 && shipingWeight <= 2000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21;
-                regionalCharge = shipping.regional + 17 + 27;
-                nationalCharge = shipping.national + 25 + 33;
+                localCharge = 122; //shipping.local + 13 + 21;
+                regionalCharge = 122; //shipping.regional + 17 + 27;
+                nationalCharge = 122; //shipping.national + 25 + 33;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1296,9 +1296,9 @@ function calculateResult() {
 
             case shipingWeight > 2000 && shipingWeight <= 3000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 2;
-                regionalCharge = shipping.regional + 17 + 27 * 2;
-                nationalCharge = shipping.national + 25 + 33 * 2;
+                localCharge = 122 +34 ;//shipping.local + 13 + 21 * 2;
+                regionalCharge = 122 +34 ;//shipping.regional + 17 + 27 * 2;
+                nationalCharge = 122 +34 ;//shipping.national + 25 + 33 * 2;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1307,9 +1307,9 @@ function calculateResult() {
 
             case shipingWeight > 3000 && shipingWeight <= 4000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 3;
-                regionalCharge = shipping.regional + 17 + 27 * 3;
-                nationalCharge = shipping.national + 25 + 33 * 3;
+                localCharge = 122 +34*2 ;//shipping.local + 13 + 21 * 2;
+                regionalCharge = 122 +34*2 ;//shipping.regional + 17 + 27 * 2;
+                nationalCharge = 122 +34*2 ;//shipping.national + 25 + 33 * 2;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1318,9 +1318,9 @@ function calculateResult() {
 
             case shipingWeight > 4000 && shipingWeight <= 5000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4;
-                regionalCharge = shipping.regional + 17 + 27 * 4;
-                nationalCharge = shipping.national + 25 + 33 * 4;
+                localCharge = 122 +34*3 ;
+                regionalCharge = 122 +34*3 ;
+                nationalCharge = 122 +34*3 ;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1329,9 +1329,9 @@ function calculateResult() {
 
             case shipingWeight > 5000 && shipingWeight <= 6000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4 + 12;
-                regionalCharge = shipping.regional + 17 + 27 * 4 + 13;
-                nationalCharge = shipping.national + 25 + 33 * 4 + 16;
+                localCharge = 122 +34*3 +18;
+                regionalCharge = 122 +34*3 +18;
+                nationalCharge = 122 +34*3 +18;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1339,9 +1339,9 @@ function calculateResult() {
                 break;
             case shipingWeight > 6000 && shipingWeight <= 7000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4 + 12 * 2;
-                regionalCharge = shipping.regional + 17 + 27 * 4 + 13 * 2;
-                nationalCharge = shipping.national + 25 + 33 * 4 + 16 * 2;
+                localCharge = 122 +34*3 +18*2;
+                regionalCharge = 122 +34*3 +18*2;
+                nationalCharge = 122 +34*3 +18*2;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge
@@ -1349,9 +1349,9 @@ function calculateResult() {
                 break;
             case shipingWeight > 7000 && shipingWeight <= 8000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4 + 12 * 3;
-                regionalCharge = shipping.regional + 17 + 27 * 4 + 13 * 3;
-                nationalCharge = shipping.national + 25 + 33 * 4 + 16 * 3;
+                localCharge = 122 +34*3 +18*3;
+                regionalCharge = 122 +34*3 +18*3;
+                nationalCharge = 122 +34*3 +18*3;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1359,9 +1359,9 @@ function calculateResult() {
                 break;
             case shipingWeight > 8000 && shipingWeight <= 9000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4 + 12 * 4;
-                regionalCharge = shipping.regional + 17 + 27 * 4 + 13 * 4;
-                nationalCharge = shipping.national + 25 + 33 * 4 + 16 * 4;
+                localCharge = 122 +34*3 +18*4;
+                regionalCharge = 122 +34*3 +18*4;
+                nationalCharge = 122 +34*3 +18*4;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1369,9 +1369,9 @@ function calculateResult() {
                 break;
             case shipingWeight > 9000 && shipingWeight <= 10000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4 + 12 * 5;
-                regionalCharge = shipping.regional + 17 + 27 * 4 + 13 * 5;
-                nationalCharge = shipping.national + 25 + 33 * 4 + 16 * 5;
+                localCharge = 122 +34*3 +18*5;
+                regionalCharge = 122 +34*3 +18*5;
+                nationalCharge = 122 +34*3 +18*5;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1379,9 +1379,9 @@ function calculateResult() {
                 break;
             case shipingWeight > 10000 && shipingWeight <= 11000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4 + 12 * 6;
-                regionalCharge = shipping.regional + 17 + 27 * 4 + 13 * 6;
-                nationalCharge = shipping.national + 25 + 33 * 4 + 16 * 6;
+                localCharge = 122 +34*3 +18*6;
+                regionalCharge = 122 +34*3 +18*6;
+                nationalCharge = 122 +34*3 +18*6;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1389,9 +1389,59 @@ function calculateResult() {
                 break;
             case shipingWeight > 11000 && shipingWeight <= 12000:
                 console.log("inside switch");
-                localCharge = shipping.local + 13 + 21 * 4 + 12 * 7;
-                regionalCharge = shipping.regional + 17 + 27 * 4 + 13 * 7;
-                nationalCharge = shipping.national + 25 + 33 * 4 + 16 * 7;
+                localCharge = 122 +34*3 +18*7;
+                regionalCharge = 122 +34*3 +18*7;
+                nationalCharge = 122 +34*3 +18*7;
+
+                shippingCharge[0].innerHTML = localCharge;
+                shippingCharge[1].innerHTML = regionalCharge;
+                shippingCharge[2].innerHTML = nationalCharge;
+                break;
+            case shipingWeight > 12000 && shipingWeight <= 13000:
+                console.log("inside switch");
+                localCharge = 122 +34*3 +18*8;
+                regionalCharge = 122 +34*3 +18*8;
+                nationalCharge = 122 +34*3 +18*8;
+
+                shippingCharge[0].innerHTML = localCharge;
+                shippingCharge[1].innerHTML = regionalCharge;
+                shippingCharge[2].innerHTML = nationalCharge;
+                break;
+            case shipingWeight > 13000 && shipingWeight <= 14000:
+                console.log("inside switch");
+                localCharge = 122 +34*3 +18*9;
+                regionalCharge = 122 +34*3 +18*9;
+                nationalCharge = 122 +34*3 +18*9;
+
+                shippingCharge[0].innerHTML = localCharge;
+                shippingCharge[1].innerHTML = regionalCharge;
+                shippingCharge[2].innerHTML = nationalCharge;
+                break;
+            case shipingWeight > 14000 && shipingWeight <= 15000:
+                console.log("inside switch");
+                localCharge = 122 +34*3 +18*10;
+                regionalCharge = 122 +34*3 +18*10;
+                nationalCharge = 122 +34*3 +18*10;
+
+                shippingCharge[0].innerHTML = localCharge;
+                shippingCharge[1].innerHTML = regionalCharge;
+                shippingCharge[2].innerHTML = nationalCharge;
+                break;
+            case shipingWeight > 15000 && shipingWeight <= 16000:
+                console.log("inside switch");
+                localCharge = 122 +34*3 +18*11;
+                regionalCharge = 122 +34*3 +18*11;
+                nationalCharge = 122 +34*3 +18*11;
+
+                shippingCharge[0].innerHTML = localCharge;
+                shippingCharge[1].innerHTML = regionalCharge;
+                shippingCharge[2].innerHTML = nationalCharge;
+                break;
+            case shipingWeight > 16000 && shipingWeight <= 17000:
+                console.log("inside switch");
+                localCharge = 122 +34*3 +18*12;
+                regionalCharge = 122 +34*3 +18*12;
+                nationalCharge = 122 +34*3 +18*12;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
@@ -1400,9 +1450,9 @@ function calculateResult() {
 
             case shipingWeight > 17000 && shipingWeight <= 18000:
                 console.log("inside switch");
-                localCharge = 222;
-                regionalCharge = 313;
-                nationalCharge = 443;
+                localCharge = 122 +34*3 +18*13;
+                regionalCharge = 122 +34*3 +18*13;
+                nationalCharge = 122 +34*3 +18*13;
 
                 shippingCharge[0].innerHTML = localCharge;
                 shippingCharge[1].innerHTML = regionalCharge;
