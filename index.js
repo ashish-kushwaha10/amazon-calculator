@@ -2976,7 +2976,7 @@ function calculateResult() {
     //cost tax
     costPriceTax = (costPrice * productGST) / 100;
 
-    payableTaxLocal = sellingTax; //+ gstOnACSChargesLocal + costPriceTax;
+    payableTaxLocal = sellingTax - ; //+ gstOnACSChargesLocal + costPriceTax;
     payableTaxRegional = sellingTax; //+ gstOnACSChargesRegional + costPriceTax;
     payableTaxNational = sellingTax; //+ gstOnACSChargesNational + costPriceTax;
 
