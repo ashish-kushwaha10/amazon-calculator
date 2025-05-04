@@ -2678,17 +2678,17 @@ function calculateResult() {
 
     // condition for closing fee
     switch (true) {
-        case sellingPrice <= 250:
-            closingFee = 4;
+        case sellingPrice <= 300:
+            closingFee = 5;
             break;
-        case sellingPrice > 250 && sellingPrice <= 500:
-            closingFee = 9;
+        case sellingPrice > 300 && sellingPrice <= 500:
+            closingFee = 10;
             break;
         case sellingPrice > 500 && sellingPrice <= 1000:
-            closingFee = 30;
+            closingFee = 33;
             break;
         case sellingPrice > 1000:
-            closingFee = 61;
+            closingFee = 64;
             break;
     }
     // showing output in webPage with id="closing-fee"
