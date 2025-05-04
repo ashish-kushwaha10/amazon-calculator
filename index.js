@@ -2976,9 +2976,9 @@ function calculateResult() {
     //cost tax
     costPriceTax = (costPrice * productGST) / 100;
 
-    payableTaxLocal = sellingTax; //+ gstOnACSChargesLocal + costPriceTax;
-    payableTaxRegional = sellingTax; //+ gstOnACSChargesRegional + costPriceTax;
-    payableTaxNational = sellingTax; //+ gstOnACSChargesNational + costPriceTax;
+    payableTaxLocal = sellingTax - gstOnACSChargesLocal; //+ gstOnACSChargesLocal + costPriceTax;
+    payableTaxRegional = sellingTax - gstOnACSChargesRegional; //+ gstOnACSChargesRegional + costPriceTax;
+    payableTaxNational = sellingTax - gstOnACSChargesNational; //+ gstOnACSChargesNational + costPriceTax;
 
     // when payble tax is negative
     if (payableTaxLocal < 0) {
